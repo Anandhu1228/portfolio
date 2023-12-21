@@ -14,36 +14,38 @@
 	<style>
 
 		body {
-			  font-family: 'Montserrat', sans-serif;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+  		.custom-video {
+		    	width: 100%;
+			height: auto;
 			}
-
-  			.custom-video {
-			    width: 100%;
-			    height: auto;
-			  }
 			 
-				.project_template{
-					margin-top: 80px;
-				}
+		.project_template{
+			margin-top: 80px;
+		}
 
-				.video_desc{
-					margin-bottom: 50px;
-				}
+		.video_desc{
+			margin-bottom: 50px;
+		}
 
-				.image_top {
-					margin-top: 80px;
-				}
+		.image_top {
+			margin-top: 80px;
+		}
 
-			    .bg-custom_header {
-			    	background-color: #001F3F;
-			    	min-height: 90px;
-			    }
-			    .bg_custom_footer {
-			    	background-color: #001F3F;
-			    }
-			    .bg-custom-light {
-    				background-color: #dddddd
-    			}
+		.bg-custom_header {
+		    	background-color: #001F3F;
+		    	min-height: 90px;
+		}
+	
+		.bg_custom_footer {
+		    	background-color: #001F3F;
+		}
+
+		.bg-custom-light {
+    			background-color: #dddddd
+    		}
 
 
 
@@ -228,5 +230,46 @@
         }
 
 </script>
+
+
+<script>
+  $(document).ready(function () {
+    var isFullScreen = false;
+
+    // Double-click event handler for images
+    $('.carousel-item img').dblclick(function () {
+      var image = $(this)[0]; // Get the DOM element of the clicked image
+      toggleFullScreen(image);
+    });
+
+    // Function to toggle fullscreen mode for a specific image
+    function toggleFullScreen(image) {
+      if (!isFullScreen) {
+        if (image.requestFullscreen) {
+          image.requestFullscreen();
+        } else if (image.mozRequestFullScreen) {
+          image.mozRequestFullScreen();
+        } else if (image.webkitRequestFullscreen) {
+          image.webkitRequestFullscreen();
+        } else if (image.msRequestFullscreen) {
+          image.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+
+      isFullScreen = !isFullScreen;
+    }
+  });
+</script>
+	
 </body>
 </html>
