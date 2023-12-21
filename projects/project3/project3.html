@@ -22,28 +22,35 @@
 			    height: auto;
 			  }
 			 
-				.project_template{
-					margin-top: 80px;
-				}
+			.project_template{
+				margin-top: 80px;
+			}
 
-				.video_desc{
-					margin-bottom: 50px;
-				}
+			.video_desc{
+				margin-bottom: 50px;
+			}
 
-				.image_top {
-					margin-top: 80px;
-				}
+			.image_top {
+				margin-top: 80px;
+			}
 
-			    .bg-custom_header {
-			    	background-color: #001F3F;
+			.bg-custom_header {
+			 	background-color: #001F3F;
 			    	min-height: 90px;
-			    }
-			    .bg_custom_footer {
+			}
+			.bg_custom_footer {
 			    	background-color: #001F3F;
-			    }
-			    .bg-custom-light {
+			 }
+			.bg-custom-light {
     				background-color: #dddddd
     			}
+
+		.carousel-inner {
+    			display: flex;
+    			align-items: center;
+    			justify-content: center;
+    			height: 100vh;
+  		}
 
 
 
@@ -300,5 +307,45 @@
         }
 
 </script>
+
+<script>
+  $(document).ready(function () {
+    var isFullScreen = false;
+
+    // Double-click event handler for images
+    $('.carousel-item img').dblclick(function () {
+      var image = $(this)[0]; // Get the DOM element of the clicked image
+      toggleFullScreen(image);
+    });
+
+    // Function to toggle fullscreen mode for a specific image
+    function toggleFullScreen(image) {
+      if (!isFullScreen) {
+        if (image.requestFullscreen) {
+          image.requestFullscreen();
+        } else if (image.mozRequestFullScreen) {
+          image.mozRequestFullScreen();
+        } else if (image.webkitRequestFullscreen) {
+          image.webkitRequestFullscreen();
+        } else if (image.msRequestFullscreen) {
+          image.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+
+      isFullScreen = !isFullScreen;
+    }
+  });
+</script>
+	
 </body>
 </html>
