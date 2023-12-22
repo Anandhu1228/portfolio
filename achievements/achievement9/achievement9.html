@@ -46,6 +46,7 @@
         <div class="row text-white">
             <div class="col-md-6 col-9 p-3 pl-5">
             	<a class="" href="#Achievements"><h3 style="color: white;">President, Team Karnasena</h3></a>
+		    <p style="font-size: 15px;">March 2023 - May 2023</p>
             </div>
         </div>
     </header>
@@ -112,7 +113,9 @@
 		  </a>
 		</div>
 	      </div>
-	      
+	      <!--<div class="col-md-12 text-center image_top">
+			<h6>Double click to view in full screen</h6>
+		</div>-->
 
 
 	    </div>
@@ -133,6 +136,43 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/02f66249c3.js" crossorigin="anonymous"></script>
 
+	$(document).ready(function () {
+	    var isFullScreen = false;
+	
+	    // Double-click event handler for images
+	    $('.carousel-item img').dblclick(function () {
+	      var image = $(this)[0]; // Get the DOM element of the clicked image
+	      toggleFullScreen(image);
+	    });
+	
+	    // Function to toggle fullscreen mode for a specific image
+	    function toggleFullScreen(image) {
+	      if (!isFullScreen) {
+	        if (image.requestFullscreen) {
+	          image.requestFullscreen();
+	        } else if (image.mozRequestFullScreen) {
+	          image.mozRequestFullScreen();
+	        } else if (image.webkitRequestFullscreen) {
+	          image.webkitRequestFullscreen();
+	        } else if (image.msRequestFullscreen) {
+	          image.msRequestFullscreen();
+	        }
+	      } else {
+	        if (document.exitFullscreen) {
+	          document.exitFullscreen();
+	        } else if (document.mozCancelFullScreen) {
+	          document.mozCancelFullScreen();
+	        } else if (document.webkitExitFullscreen) {
+	          document.webkitExitFullscreen();
+	        } else if (document.msExitFullscreen) {
+	          document.msExitFullscreen();
+	        }
+	      }
+	
+	      isFullScreen = !isFullScreen;
+	    }
+	  });
+	</script>
 	
 </body>
 </html>
