@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hobby project 6</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+	<style>
+
+		body {
+		 	font-family: 'Montserrat', sans-serif;
+		}
+
+  		.custom-video {
+		    width: 100%;
+		    height: auto;
+		}
+			 
+		.project_template{
+			margin-top: 80px;
+		}
+
+		.video_desc{
+			margin-bottom: 50px;
+		}
+
+		.bg-custom_header {
+		    	background-color: #001F3F;
+		    	min-height: 90px;
+		}
+		
+		.bg_custom_footer {
+		    	background-color: #001F3F;
+		}
+		
+		.bg-custom-light {
+    			background-color: #dddddd
+    		}
+
+    		.image_top {
+			margin-top: 80px;
+		}
+
+		.carousel-inner {
+		    display: flex;
+    		    align-items: center;
+    		    justify-content: center;
+  		}
+
+		.sub_top {
+			margin-top: 20px;
+		    }
+
+
+
+	</style>
+</head>
+
+<body>
+
+	<div class="fixed-top">
+    <header class="bg-custom_header">
+        <div class="row text-white">
+            <div class="col-md-6 col-9 p-3 pl-5">
+            	<a class="" href="#Projects"><h3 style="color: white;">Studio for video recording</h3></a>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+	<section class="p-5 bg-custom-light"style="margin-top: 100px;" id="Projects">
+	  <div class="container">
+	    <div class="row">
+
+
+
+	    <div class="col-md-12 project_template" id="Project_no">
+	      	<h3>Studio for video recording</h3>
+	    </div>
+	    <div class="col-md-12 video_desc" style="margin-top: 30px;">
+	      	<h5 style="margin-bottom: 40px;">Description</h5>
+				<p style="font-size: 16px;">
+					<span style="color:#001F3F;font-size: 18px;"><u><b>Introduction</b></u></span><br><br>
+					Step into my creative sanctuary — a DIY Video Recording Studio crafted with artistic flair, focused on capturing the essence of music, boxing, and workout videos. Situated in a separate room within my old home, this studio is a testament to personal expression and functionality. Let's delve into the details of its design, components, and the unique blend of aesthetics that make it a truly immersive space.<br><br>
+
+					<span style="color:#001F3F;font-size: 18px;"><u><b>Artistic Appearance</b></u></span><br><br>
+					The studio's aesthetic journey begins with a meticulous paint job. The entire room, along with half of the floor, is adorned in a striking black hue, creating a dramatic backdrop that sets the stage for creativity. A conscious blend of black and white elements contributes to a visually appealing and balanced environment.<br><br>
+
+					<span style="color:#001F3F;font-size: 18px;"><u><b>Custom Sound System and Holder Setup</b></u></span><br><br>
+					The auditory experience is elevated by a self-made 100-watt sound system, delivering crisp and immersive audio. A strategically positioned holder for the computer and speakers ensures an organized and efficient setup, contributing to a seamless recording experience.<br><br>
+
+					<span style="color:#001F3F;font-size: 18px;"><u><b>Personal Touches</b></u></span><br><br>
+					Infusing personal touches, I adorned the studio with two captivating astronaut-holding-guitar photos, creating a cosmic connection between music and the cosmos. On the opposite side, motivational boxing quotes serve as inspiration for intense workout sessions and video recordings.<br><br>
+
+					<span style="color:#001F3F;font-size: 18px;"><u><b>Self-Made Tripod and Fan</b></u></span><br><br>
+					A self-made tripod stands as a testament to hands-on craftsmanship, providing stable support for cameras during video shoots. The addition of a self-made fan operating on a 12-volt adapter introduces a quiet breeze, ensuring a comfortable, distraction-free and noise-free environment for recording.<br><br>
+
+					<span style="color:#001F3F;font-size: 18px;"><u><b>Isolation for Optimal Sound</b></u></span><br><br>
+					To maintain the studio's focus on audio quality, it is thoughtfully isolated from nearby homes. This isolation guarantees a quiet space, ideal for capturing the nuances of guitar melodies, drum beats, and the intensity of boxing workouts.<br><br>
+				</p>
+			 </div>
+	      <div class="col-md-12 text-center">
+	      	<h6>Project Video Preview</h6>
+	      </div>
+	      <div class="col-md-12">
+	        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+	          <div class="carousel-inner">
+	            <div class="carousel-item active">
+	              <video class="d-block w-100 h-100 custom-video"  controls onclick="toggleFullscreen(this)">
+	                <source src="video/video.mp4" type="video/mp4">
+	              </video>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+		    <div class="col-md-12 text-center sub_top">
+			<h6>Click to view video in full screen</h6>
+		</div>
+	      <div class="col-md-12 text-center image_top">
+	      	<h6>Project Image Reference</h6>
+	      </div>
+	      <div class="col-md-12">
+	        <div id="carouselProjects" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselProjects" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselProjects" data-slide-to="1"></li>
+			    <li data-target="#carouselProjects" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image1.jpg" alt="Couldn't Load Image">
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselProjects" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselProjects" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+	      </div>
+		    <div class="col-md-12 text-center sub_top">
+			<h6>Double click to view in full screen</h6>
+		</div>
+
+
+
+	    </div>
+	  </div>
+	</section>
+
+	
+
+	<footer class="bg_custom_footer section_gap" style="height: 80px;">
+    <div class="container d-flex align-items-center justify-content-center h-100">
+        <h5 class="text-center text-white">Thank you and have a great day</h5>
+    </div>
+</footer>
+	
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/02f66249c3.js" crossorigin="anonymous"></script>
+
+	<script>
+  		function toggleFullscreen(video) {
+    		if (!document.fullscreenElement) {
+      		video.requestFullscreen().catch(err => {
+        	console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+      	});
+    	} else {
+      		document.exitFullscreen();
+    	}
+  }
+
+  function zoomImage() {
+            var image = document.getElementById("zoomedImage");
+
+            // Toggle the 'zoomed' class on double click
+            image.classList.toggle("zoomed");
+        }
+
+</script>
+
+<script>
+  $(document).ready(function () {
+    var isFullScreen = false;
+
+    // Double-click event handler for images
+    $('.carousel-item img').dblclick(function () {
+      var image = $(this)[0]; // Get the DOM element of the clicked image
+      toggleFullScreen(image);
+    });
+
+    // Function to toggle fullscreen mode for a specific image
+    function toggleFullScreen(image) {
+      if (!isFullScreen) {
+        if (image.requestFullscreen) {
+          image.requestFullscreen();
+        } else if (image.mozRequestFullScreen) {
+          image.mozRequestFullScreen();
+        } else if (image.webkitRequestFullscreen) {
+          image.webkitRequestFullscreen();
+        } else if (image.msRequestFullscreen) {
+          image.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+
+      isFullScreen = !isFullScreen;
+    }
+  });
+</script>
+	
+</body>
+</html>
