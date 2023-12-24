@@ -17,6 +17,7 @@
 
 		body {
 			  font-family: 'Montserrat', sans-serif;
+
 			}
 
   		.btn {
@@ -122,14 +123,31 @@
 			        filter: brightness(150%);
 			    }
 
-			    .btnProject{
-			    	background-color: #1abc9c;
-			    	color: white;
-			    }
+			    .btnProject {
+				  background-color: #1abc9c;
+				  color: white;
+				  display: flex;
+				  align-items: center;
+				  margin-bottom: 10px;
+				  transition: background-color 0.8s ease, color 0.8s ease;
+				}
+
+				.btnProject:hover {
+				  color: #1abc9c;
+				  background-color: white;
+				}
+
 			    .btnAchievement{
 			    	background-color: #008080;
 			    	color: white;
+			    	transition: background-color 0.8s ease, color 0.8s ease;
 			    }
+
+			    .btnAchievement:hover {
+				  color: #008080;
+				  background-color: #dddddd;
+				}
+
 			    .edu_top{
 			    	margin-top: 30px;
 			    }
@@ -144,7 +162,18 @@
 			        text-decoration: underline;
 			        color: #004466;
 			    }
+			    .btn {
+			      transition: transform 0.3s ease-in-out;
+			    }
 
+			    .btn:hover {
+			      transform: scale(1.1);
+			    }
+
+			    .icon_skill{
+			    	width: 30px;
+			    	margin-right: 8px;
+			    }
 
 	</style>
 
@@ -167,7 +196,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link text-white" href="#Skills">Skills <span class="sr-only">(current)</span></a>
+                                <a class="nav-link text-white" href="#Skills">Skills & Tools<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#OtherActivities">Other Activities</a>
@@ -238,35 +267,56 @@
 
 
 	<section class="bg-custom-light p-5 section_gap" id="Skills">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	        <h3 class="text-white">Skills</h3>
+	    <div class="text-center bg-light-blue rounded p-2" style="margin-bottom: 20px;">
+	      <h3 class="text-white">Skills & Tools</h3>
 	    </div>
-		<div class="container">
-			<div class="row">
-				<button type="button" class="btn btnProject">Machine Learning</button>
-				<button type="button" class="btn btnProject">scikit-learn</button>
-				<button type="button" class="btn btnProject">Python</button>
-				<button type="button" class="btn btnProject">Pandas</button>
-				<button type="button" class="btn btnProject">Numpy</button>
-				<button type="button" class="btn btnProject">Matplotlib</button>
-				<button type="button" class="btn btnProject">Excel</button>
-				<button type="button" class="btn btnProject">R</button>
-				<button type="button" class="btn btnProject">Web Development</button>
-				<button type="button" class="btn btnProject">Nodejs</button>
-				<button type="button" class="btn btnProject">Express.js</button>
-				<button type="button" class="btn btnProject">Mongodb</button>	
-				<button type="button" class="btn btnProject">HTML</button>
-				<button type="button" class="btn btnProject">Css</button>
-				<button type="button" class="btn btnProject">Javascript</button>
-				<button type="button" class="btn btnProject">Java</button>
-				<button type="button" class="btn btnProject">C++</button>
-				<button type="button" class="btn btnProject">C</button>
-				<button type="button" class="btn btnProject">Leadership</button>
-				<button type="button" class="btn btnProject">Problem Solving</button>
-				<button type="button" class="btn btnProject">Communication</button>
-			</div> 	
-		</div>
-	</section>
+	    <div class="container">
+	      <div class="row">
+	      	<button type="button" class="btnProject btn btnProject"><img style="width:32px;" class="icon_skill" src="icons/ml.png"> Machine Learning</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/python.png"> Python</button>
+	        <button type="button" class="btnProject btn btnProject"><img style="width:40px;" class="icon_skill" src="icons/skl.png"> scikit-learn</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/chatgpt.png"> ChatGPT</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/pandas.png"> Pandas</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/numpy.png"> Numpy</button>
+	        <button type="button" class="btnProject btn btnProject"><img style="width:50px;" class="icon_skill" src="icons/mat.svg"> Matplotlib</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/aws.png"> AWS</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/winscp.png"> WinSCP</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/nginx.png"> nginx</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/git.png"> GitHub</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/pycharm.png"> PyCharm</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/vs.png"> Visual Studio</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/excel.png"> Excel</button>
+	        <button type="button" class="btnProject btn btnProject"><img  class="icon_skill" src="icons/mysql.png"> MySQL</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/mwben.png"> MySQL Workbench</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/r.png"> R</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/rs.png"> RStudio</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/webdev.png"> Web Development</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/njs.png"> Node.js</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ex.png"> Express.js</button>
+	        <button type="button" class="btnProject btn btnProject"><img style="width:14px;" class="icon_skill" src="icons/mdb.png"> MongoDB</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/3t.png"> Studio 3T</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/html.png"> HTML</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/css.png"> CSS</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/js.png"> JavaScript</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/sublime.png"> Sublime Text</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/java.png"> Java</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/c++.png"> C++</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/c.png"> C</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/cb.png"> CodeBlocks</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/arduino.png"> Arduino IDE</button>
+	        <button type="button" class="btnProject btn btnProject"><img  class=" icon_skill" src="icons/over.png"> Latex</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/word.png"> Microsoft Word</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/lead.png"> Leadership</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ps.png"> Problem Solving</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/com.png"> Communication</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/aud.png"> Audacity</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/canva.png"> Canva</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/lr.png"> Adobe Lightroom</button>
+	        <button type="button" class="btnProject btn btnProject"><img style="width:35px;" class="icon_skill" src="icons/pics.png"> Picsart</button>
+	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ez.png"> EZ Drummer</button>
+	      </div>
+	    </div>
+	  </section>
 
 
 
@@ -283,18 +333,18 @@
 	    </div>
 		<div class="container">
 			<div class="row">
-				<button type="button" class="btn btnAchievement">Guitarist</button>
-				<button type="button" class="btn btnAchievement">Drummer</button>
-				<button type="button" class="btn btnAchievement">Body Builder</button>
-				<button type="button" class="btn btnAchievement">Boxer</button>
-				<button type="button" class="btn btnAchievement">DIY Electronics Projects</button>
-				<button type="button" class="btn btnAchievement">DIY Electrical Projects</button>
-				<button type="button" class="btn btnAchievement">Music Creation</button>
-				<button type="button" class="btn btnAchievement">Photography</button>
-				<button type="button" class="btn btnAchievement">Videography</button>
-				<button type="button" class="btn btnAchievement">Photo Editing</button>
-				<button type="button" class="btn btnAchievement">Video Editing</button>	
-				<button type="button" class="btn btnAchievement">Audio Editing</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/guitar.png"> Guitarist</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/drums.png"> Drummer</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/body.png"> Body Builder</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/boxer.png"> Boxer</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/elec.png"> DIY Electronics Projects</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/ele.png"> DIY Electrical Projects</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/music.png"> Music Creation</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/image.png"> Photography</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/video.png"> Videography</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/imagee.png"> Photo Editing</button>
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/videoe.png"> Video Editing</button>	
+				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/audioe.png"> Audio Editing</button>
 			</div> 	
 		</div>
 	</section>
@@ -313,11 +363,11 @@
 	    </div>
 		<div class="container">
 				<h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
-				<a class="" href="projects/project1/project1.html"><h5 style="color: black;margin-top: 30px;">Youtube UI Design</h5></a>
+				<a class="" href="projects/project1/project1.html"><h5 style="color: #001F3F;margin-top: 30px;">Youtube UI Design</h5></a>
 			 	<a class="" href="projects/project2/project2.html"><h5 style="color: black;">First Personal Website (test website)</h5></a>
-			 	<a class="" href="projects/project3/project3.html"><h5 style="color: black;">Ecommerse website</h5></a>
+			 	<a class="" href="projects/project3/project3.html"><h5 style="color: #001F3F;">Ecommerse website</h5></a>
 			 	<a class="" href="projects/project4/project4.html"><h5 style="color: black;">Banglore home price prediction (regression model)</h5></a>
-			 	<a class="" href="projects/project5/project5.html"><h5 style="color: black;">Personal Portfolio</h5></a>
+			 	<a class="" href="projects/project5/project5.html"><h5 style="color: #001F3F;">Personal Portfolio</h5></a>
 		</div>
 	</section>
 
@@ -335,15 +385,15 @@
 	    </div>
 		<div class="container">
 			<h6 class="text-center" style="color:#008080;">Click on any achievement to redirect to that achievement details</h6>
-			 	<a class="" href="achievements/achievement1/achievement1.html"><h5 style="color: black;margin-top: 30px;">Student Lead, Alumni Relations Cell CEC</h5></a>
+			 	<a class="" href="achievements/achievement1/achievement1.html"><h5 style="color: #001F3F;margin-top: 30px;">Student Lead, Alumni Relations Cell CEC</h5></a>
 			 	<a class="" href="achievements/achievement2/achievement2.html"><h5 style="color: black;">President, PRODDEC CEC</h5></a>
-			 	<a class="" href="achievements/achievement3/achievement3.html"><h5 style="color: black;">Campus Ambassador, Techmaghi</h5></a>
+			 	<a class="" href="achievements/achievement3/achievement3.html"><h5 style="color: #001F3F;">Campus Ambassador, Techmaghi</h5></a>
 			 	<a class="" href="achievements/achievement4/achievement4.html"><h5 style="color: black;">Class Representative ( consecutive 3 years )</h5></a>
-			 	<a class="" href="achievements/achievement5/achievement5.html"><h5 style="color: black;">Data Collection Manager, Alumni Relation Cell CEC</h5></a>
+			 	<a class="" href="achievements/achievement5/achievement5.html"><h5 style="color: #001F3F;">Data Collection Manager, Alumni Relation Cell CEC</h5></a>
 				<a class="" href="achievements/achievement6/achievement6.html"><h5 style="color: black;">PRO PRODDEC CEC</h5></a>
-				<a class="" href="achievements/achievement7/achievement7.html"><h5 style="color: black;">Social Media Manager, NSS CEC UNITS 128, 338, 184</h5></a>
+				<a class="" href="achievements/achievement7/achievement7.html"><h5 style="color: #001F3F;">Social Media Manager, NSS CEC UNITS 128, 338, 184</h5></a>
 				<a class="" href="achievements/achievement8/achievement8.html"><h5 style="color: black;">Social Media Manager, IHRD Tharang ( National Level Tech Fest )</h5></a>
-				<a class="" href="achievements/achievement9/achievement9.html"><h5 style="color: black;">President, Team Karnasena ( Local welfare club )</h5></a>
+				<a class="" href="achievements/achievement9/achievement9.html"><h5 style="color: #001F3F;">President, Team Karnasena ( Local welfare club )</h5></a>
 				<a class="" href="achievements/achievement10/achievement10.html"><h5 style="color: black;">Member of Sponsorship, Media, Organizing Committe IHRD Tharang ( National Level Tech Fest )</h5></a>
 				<a class="" href="achievements/achievement11/achievement11.html"><h5 style="color: black;">Campus Ambassador, Teachnook</h5></a>
 		</div>
@@ -477,7 +527,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/02f66249c3.js" crossorigin="anonymous"></script>
 
-	<script>
+		<script>
 	    document.addEventListener("DOMContentLoaded", function () {
 	        document.querySelectorAll('a.nav-link').forEach(function (link) {
 	            link.addEventListener('click', function (e) {
@@ -518,7 +568,8 @@
 	        }
 	    });
 	</script>
-						
+
+
 	<script>
 	    function openMailbox() {
 	        var shouldSend = confirm("Do you want to send an email?");
