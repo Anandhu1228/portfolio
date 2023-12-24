@@ -102,6 +102,10 @@
     				background-color: #dddddd
     			}
 
+    			.bg_custom{
+    				color: #001F3F;
+    			}
+
     			.bg-light-blue {
 			        background-color: #001F3F; /* Light blue color code */
 			    }
@@ -125,6 +129,20 @@
 			    .btnAchievement{
 			    	background-color: #008080;
 			    	color: white;
+			    }
+			    .edu_top{
+			    	margin-top: 30px;
+			    }
+			    .btn_edu{
+			    	height: 100%;
+			    	width: 100%;
+			    }
+			    .mail_me {
+			    	cursor: pointer;
+			    }
+			    .mail_me:hover {
+			        text-decoration: underline;
+			        color: #004466;
 			    }
 
 
@@ -152,16 +170,19 @@
                                 <a class="nav-link text-white" href="#Skills">Skills <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#OtherActivities">Other Activities </a>
+                                <a class="nav-link text-white" href="#OtherActivities">Other Activities</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#Projectlist">Projects List</a>
+                                <a class="nav-link text-white" href="#Projectlist">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#Achievementlist">Achievents List</a>
+                                <a class="nav-link text-white" href="#Achievementlist">Achievents</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#Hobbyproject">Hobby Projects List</a>
+                                <a class="nav-link text-white" href="#Hobbyproject">Hobby Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#Education">Education</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#Contact">Contact/Connect</a>
@@ -223,11 +244,13 @@
 		<div class="container">
 			<div class="row">
 				<button type="button" class="btn btnProject">Machine Learning</button>
+				<button type="button" class="btn btnProject">scikit-learn</button>
 				<button type="button" class="btn btnProject">Python</button>
 				<button type="button" class="btn btnProject">Pandas</button>
 				<button type="button" class="btn btnProject">Numpy</button>
 				<button type="button" class="btn btnProject">Matplotlib</button>
 				<button type="button" class="btn btnProject">Excel</button>
+				<button type="button" class="btn btnProject">R</button>
 				<button type="button" class="btn btnProject">Web Development</button>
 				<button type="button" class="btn btnProject">Nodejs</button>
 				<button type="button" class="btn btnProject">Express.js</button>
@@ -286,7 +309,7 @@
 
 	<section class="bg-custom-light p-5 section_gap" id="Projectlist">
 		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Projects List</h3>
+	     	<h3 class="text-white">Projects</h3>
 	    </div>
 		<div class="container">
 				<h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
@@ -308,7 +331,7 @@
 
 	<section class="bg-white p-5 section_gap" id="Achievementlist">
 		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Achievements List</h3>
+	     	<h3 class="text-white">Achievements</h3>
 	    </div>
 		<div class="container">
 			<h6 class="text-center" style="color:#008080;">Click on any achievement to redirect to that achievement details</h6>
@@ -334,9 +357,9 @@
 
 
 
-	<section class="bg-white p-5 section_gap" id="Hobbyproject">
+	<section class="bg-custom-light p-5 section_gap" id="Hobbyproject">
 		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Hobby Projects List</h3>
+	     	<h3 class="text-white">Hobby Projects</h3>
 	    </div>
 		<div class="container">
 			<h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
@@ -347,6 +370,53 @@
 			 	<a class="" href="Hobby/Hobby5/Hobby5.html"><h5 style="color: black;">Air cooler</h5></a>
 			 	<a class="" href="Hobby/Hobby6/Hobby6.html"><h5 style="color: black;">Studio for video recording</h5></a>
 		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+	<section class="p-5 bg-wight section_gap" id="Education">
+		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
+        	<h3 class="text-center"style="color: white;">Education</h3>
+    	</div>
+	    <div class="container">
+	        <div class="row">
+	            <div class="edu_top col-md-12">
+	            	<button type="button" class="btn btn_edu bg-custom-light" >
+		            	<p style="font-size:16px;">
+		            		<span><a href="https://ceconline.edu/" target="_blank" class="bg_custom"><span style="font-size: 18px;">College Of Engineering Chengannur</span><a/></span><br>
+		            		Bachelor of Technology - BTech<br>
+		            		Computer Science Engineering<br>
+		            		2020 - 2024<br>
+		            	</p>
+	            	</button>
+	            </div>
+	             <div class="edu_top col-md-12">
+	             	<button type="button" class="btn btn_edu bg-custom-light">
+		            	<p style="font-size:16px;color: black;">
+		            		<span><a href="https://stratfordpublicschool.com/" target="_blank" class="bg_custom"><span style="font-size: 18px;">Stratford Public School and Junior College</span><a/></span><br>
+		            		Grades  11 - 12<br>
+		            		BioMaths<br>
+		            		2017 - 2019<br>
+		            	</p>
+	            	</button>
+	            </div>
+	             <div class="edu_top col-md-12">
+	             	<button type="button" class="btn btn_edu bg-custom-light">
+		            	<p style="font-size:16px;color: black;">
+		            		<span><a href="https://www.stthomas.edu.in/" target="_blank" class="bg_custom"><span style="font-size: 18px;">St.Thomas Residential Central School</span><a/></span><br>
+		            		Grades  1 - 10<br>
+		            		2007 - 2017<br>
+		            	</p>
+	            	</button>
+	            </div>
+	        </div>
+	    </div>
 	</section>
 
 
@@ -379,7 +449,7 @@
 	                    <h6>Instagram</h6>
 	                </a>
 	
-	                <p style="margin-top:20px;">Email: anandhumohan2018@gmail.com</p>
+	                 <p style="margin-top: 20px;"><a onclick="openMailbox()">Email: <span class="mail_me">anandhumohan2018@gmail.com</span></a></p>
 	                <p>Phone: +91 8138849120</p>
 	            </div>
 	        </div>
@@ -396,10 +466,10 @@
 
 
 	<footer class="bg_custom_footer section_gap" style="height: 80px;">
-    <div class="container d-flex align-items-center justify-content-center h-100">
-        <h5 class="text-center text-white">Thank you and have a great day</h5>
-    </div>
-</footer>
+	    <div class="container d-flex align-items-center justify-content-center h-100">
+	        <h5 class="text-center text-white">Thank you and have a great day</h5>
+	    </div>
+	</footer>
 	
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -442,6 +512,27 @@
 	        }
 	    });
 	</script>
+
+	<script>
+	    function openMailbox() {
+	        var shouldSend = confirm("Do you want to send an email?");
+	        
+	        if (shouldSend) {
+	           
+	            var recipientEmail = "anandhumohan2018@gmail.com";
+	            
+	            var mailtoLink = "mailto:" + recipientEmail;
+	            
+	            window.location.href = mailtoLink;
+	        }
+	        
+	        return false;
+	    }
+	</script>
+
+
+
+
 
 </body>
 </html>
