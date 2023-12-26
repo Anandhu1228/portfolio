@@ -1,595 +1,764 @@
 <!DOCTYPE html>
 <html style="scroll-behavior: smooth;">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Anandhu Mohan Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anandhu Mohan Portfolio</title>
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-
-	<style>
-
-		body {
-			  font-family: 'Montserrat', sans-serif;
-
-			}
-
-  		.btn {
-    			margin: 10px;
-  			}
-  			.custom-video {
-			    width: 100%;
-			    height: auto;
-			  }
-			 .cover-container {
-				    position: relative;
-				    width: 100%;
-				    height: 500px;
-				    overflow: hidden;
-				    color: white;
-				    text-align: left;
-				    display: flex;
-				}
-
-				.cover-photo {
-				    width: 100%;
-				    height: 100%;
-				    object-fit: cover;
-				    position: absolute;
-				    top: 0;
-				    left: 0;
-				    z-index: -1;
-				 
-				}
-
-				.profile-picture {
-				    width: 400px;
-				    height: 400px;
-				    border-radius: 50%;
-				    object-fit: cover;
-				    margin-left: 20px;
-				}
-
-				.profile-container {
-				    display: flex;
-				    align-items: center;
-				    justify-content: flex-start;
-				    margin-left: 9px;
-				    z-index: 1;
-				}
-
-				.project_template{
-					margin-top: 80px;
-				}
-
-				.video_desc{
-					margin-bottom: 50px;
-				}
-
-				.image_top{
-					margin-top: 50px;
-				}
-
-				.section_gap{
-					margin-top: 50px;
-				}
-
-				.social-icon_linkedin {
-		            color: #0077B5;
-		            text-decoration: none;
-		            margin: 5px;
-		            display: inline-block;
-		        }
-		        .social-icon_github {
-		            color: #333;
-		            text-decoration: none;
-		            margin: 5px;
-		            display: inline-block;
-		        }
-		        .social-icon_instagram {
-		            color: #E4405F;
-		            text-decoration: none;
-		            margin: 5px;
-		            display: inline-block;
-		        }
-
-		        .bg-custom-light {
-    				background-color: #dddddd
-    			}
-
-    			.bg_custom{
-    				color: #001F3F;
-    			}
-
-    			.bg-light-blue {
-			        background-color: #001F3F; /* Light blue color code */
-			    }
-
-			    .bg-custom_header {
-			    	background-color: #001F3F;
-			    	min-height: 90px;
-			    }
-			    .bg_custom_footer {
-			    	background-color: #001F3F;
-			    }
-
-			    .icona .navbar-toggler-icon {
-			        filter: brightness(150%);
-			    }
-
-			    .btnProject {
-				  background-color: #1abc9c;
-				  color: white;
-				  display: flex;
-				  align-items: center;
-				  margin-bottom: 10px;
-				  transition: background-color 0.8s ease, color 0.8s ease;
-				}
-
-				.btnProject:hover {
-				  color: #1abc9c;
-				  background-color: white;
-				}
-
-			    .btnAchievement{
-			    	background-color: #008080;
-			    	color: white;
-			    	transition: background-color 0.8s ease, color 0.8s ease;
-			    }
-
-			    .btnAchievement:hover {
-				  color: #008080;
-				  background-color: #dddddd;
-				}
-
-			    .edu_top{
-			    	margin-top: 30px;
-			    }
-			    .btn_edu{
-			    	height: 100%;
-			    	width: 100%;
-			    }
-			    .mail_me {
-			    	cursor: pointer;
-			    }
-			    .mail_me:hover {
-			        text-decoration: underline;
-			        color: #004466;
-			    }
-			    .btn {
-			      transition: transform 0.3s ease-in-out;
-			    }
-
-			    .btn:hover {
-			      transform: scale(1.1);
-			    }
-
-			    .icon_skill{
-			    	width: 30px;
-			    	margin-right: 8px;
-			    }
-
-	</style>
-
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .btn {
+      margin: 10px;
+    }
+    .custom-video {
+      width: 100%;
+      height: auto;
+    }
+    .cover-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      color: white;
+      text-align: left;
+      display: flex;
+    }
+    .cover-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .profile-picture {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 20px;
+    }
+    .profile-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 9px;
+      z-index: 1;
+    }
+    .project_template{
+      margin-top: 80px;
+    }
+    .video_desc{
+      margin-bottom: 50px;
+    }
+    .image_top{
+      margin-top: 50px;
+    }
+    .section_gap{
+      margin-top: 50px;
+    }
+    .social-icon_linkedin {
+      color: #0077B5;
+      text-decoration: none;
+      margin: 5px;
+      display: inline-block;
+    }
+    .social-icon_linkedin:hover{
+      text-decoration: none;
+      color: #0077B5;
+    }
+    .social-icon_github {
+      color: #333;
+      text-decoration: none;
+      margin: 5px;
+      display: inline-block;
+    }
+    .social-icon_github:hover{
+      text-decoration: none;
+      color: #333;
+    }
+    .social-icon_instagram {
+      color: #E4405F;
+      text-decoration: none;
+      margin: 5px;
+      display: inline-block;
+    }
+    .social-icon_instagram:hover{
+      text-decoration: none;
+      color: #E4405F;
+    }
+    .bg-custom-light {
+      background-color: #dddddd
+    }
+    .bg_custom{
+      color: #001F3F;
+    }
+    .bg-light-blue {
+      background-color: #001F3F;
+    }
+    .bg-custom_header {
+      background-color: #001F3F;
+      min-height: 90px;
+    }
+    .bg_custom_footer {
+      background-color: #001F3F;
+    }
+    .icona .navbar-toggler-icon {
+      filter: brightness(150%);
+    }
+    .btnProject {
+      background-color: #1abc9c;
+      color: white;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      transition: background-color 0.8s ease, color 0.8s ease;
+    }
+    .btnProject:hover {
+      color: #1abc9c;
+      background-color: white;
+    }
+    .btnAchievement{
+      background-color: #008080;
+      color: white;
+      transition: background-color 0.8s ease, color 0.8s ease;
+    }
+    .btnAchievement:hover {
+      color: #008080;
+      background-color: #dddddd;
+    }
+    .edu_top{
+      margin-top: 30px;
+    }
+    .btn_edu{
+      height: 100%;
+      width: 100%;
+    }
+    .mail_me {
+      cursor: pointer;
+    }
+    .mail_me:hover {
+      text-decoration: underline;
+      color: #004466;
+    }
+    .btn {
+      transition: transform 0.3s ease-in-out;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+    }
+    .icon_skill{
+      width: 30px;
+      margin-right: 8px;
+    }
+    .all_name{
+      background-color: white;
+      border-radius: 10px;
+      height: auto;
+      padding-top: 11.5px;
+      padding-bottom: 11.5px;
+      padding-right: 11.5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .all_name_custom{
+      background-color: #dddddd;
+      border-radius: 10px;
+      height: auto;
+      padding-top: 11.5px;
+      padding-bottom: 11.5px;
+      padding-right: 11.5px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .all_name:hover {
+      transform: scale(1.1);
+    }
+    .all_name_custom:hover {
+      transform: scale(1.1);
+    }
+    .in_name {
+      display: flex;
+      padding-left: 30px;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+    }
+    .all_name_in_one:hover{
+      text-decoration: none;
+    }
+    .btn_social {
+      display: inline-block;
+      transition: transform 0.3s ease-in-out;
+    }
+    .btn_social:hover {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
+
 <body>
+  <div class="fixed-top">
+      <header class="bg-custom_header">
+          <div class="row text-white">
+              <div class="col-md-6 col-9 p-3 pl-5">
+                <a class="" href="#Home"><h3 style="color: white;">Anandhu Mohan</h3></a>
+                  <p style="font-size: 15px;">Do It Yourself</p>
+              </div>
+              <div class="col-md-6 col-3">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                      <button class="navbar-toggler ml-auto icona" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav ml-auto">
+                              <li class="nav-item active">
+                                  <a class="nav-link text-white" href="#Skills">Skills & Tools<span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link text-white" href="#OtherActivities">Other Activities</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link text-white" href="#Projectlist">Projects</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link text-white" href="#Achievementlist">Achievents</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link text-white" href="#Hobbyproject">Hobby Projects</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link text-white" href="#Education">Education</a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link text-white" href="#Contact">Contact/Connect</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </header>
+  </div>
 
-<div class="fixed-top">
-    <header class="bg-custom_header">
-        <div class="row text-white">
-            <div class="col-md-6 col-9 p-3 pl-5">
-            	<a class="" href="#Home"><h3 style="color: white;">Anandhu Mohan</h3></a>
-                <p style="font-size: 15px;">Do It Yourself</p>
+  <section class="p-4" id="Home" style="margin-top: 150px;">
+    <div class="cover-container">
+        <img src="cover.jpg" alt="Cover Photo" class="cover-photo">
+         <div class="profile-container">
+            <img class="profile-picture" src="profile.jpg" alt="Profile Picture">
+        </div>
+    </div>
+    <div style="margin-top: 80px;">
+      <p style="font-size: 16px;">Greetings! I'm Anandhu Mohan, a self-motivated individual with a passion for tackling challenges head-on and learning independently. As a natural leader, I've cultivated a diverse skill set, from training machine models and organizing data to excelling in web development.<br>
+
+      Away from the digital realm, I find joy in the analog world of music, having taught myself guitar and drums. Going beyond mere mastery, I've constructed my own drum set and guitar amplifier, reflecting my hands-on approach to both music and technical craftsmanship.<br>
+
+      In the realm of data science, I've dedicated myself to self-study, achieving proficiency in machine learning and data organization. Looking forward, my dream is to fuse my technical expertise with a keen interest in electric vehicles, IoT, and robotics to establish a groundbreaking company.<br>
+
+      Beyond the screen and the boardroom, I'm also a self-made bodybuilder. Drawing inspiration from YouTube videos, I've sculpted my physique through dedication and hard work, embodying the same tenacity that drives my professional pursuits.<br>
+
+      Furthermore, my fascination with space and rockets speaks to my insatiable curiosity about cutting-edge technologies that push the boundaries of human achievement.<br>
+
+      In a world shaped by innovation, I stand as a testament to the power of self-motivation, leadership, and continuous learning. Join me on this journey of bridging dreams with reality, where the possibilities are as limitless as the cosmos.</p>
+    </div>
+  </section>
+
+  <section class="bg-custom-light p-5 section_gap" id="Skills">
+      <div class="text-center bg-light-blue rounded p-2" style="margin-bottom: 20px;">
+        <h3 class="text-white">Skills & Tools</h3>
+      </div>
+      <div class="text-center" style="margin-top: 20px;margin-bottom: 20px;">
+          <h6 style="color:#001F3F;">double click on any skill or tool for more reference</h6>
+      </div>
+      <div class="container">
+        <div class="row">
+          <button type="button" id="btn_machine_learning" class="btnProject btn btnProject"><img style="width:32px;" class="icon_skill" src="icons/ml.png"> Machine Learning</button>
+          <button type="button" id="btn_python" class="btnProject btn btnProject"><img class="icon_skill" src="icons/python.png"> Python</button>
+          <button type="button" id="btn_scikit_learn" class="btnProject btn btnProject"><img style="width:40px;" class="icon_skill" src="icons/skl.png"> scikit-learn</button>
+          <button type="button" id="btn_chatgpt" class="btnProject btn btnProject"><img class="icon_skill" src="icons/chatgpt.png"> ChatGPT</button>
+          <button type="button" id="btn_pandas" class="btnProject btn btnProject"><img class="icon_skill" src="icons/pandas.png"> Pandas</button>
+          <button type="button" id="btn_numpy" class="btnProject btn btnProject"><img class="icon_skill" src="icons/numpy.png"> Numpy</button>
+          <button type="button" id="btn_matplotlib" class="btnProject btn btnProject"><img style="width:50px;" class="icon_skill" src="icons/mat.svg"> Matplotlib</button>
+          <button type="button" id="btn_aws" class="btnProject btn btnProject"><img class="icon_skill" src="icons/aws.png"> AWS</button>
+          <button type="button" id="btn_winscp" class="btnProject btn btnProject"><img class="icon_skill" src="icons/winscp.png"> WinSCP</button>
+          <button type="button" id="btn_nginx" class="btnProject btn btnProject"><img class="icon_skill" src="icons/nginx.png"> nginx</button>
+          <button type="button" id="btn_github" class="btnProject btn btnProject"><img class="icon_skill" src="icons/git.png"> GitHub</button>
+          <button type="button" id="btn_pycharm" class="btnProject btn btnProject"><img class="icon_skill" src="icons/pycharm.png"> PyCharm</button>
+          <button type="button" id="btn_visual_studio" class="btnProject btn btnProject"><img class="icon_skill" src="icons/vs.png"> Visual Studio</button>
+          <button type="button" id="btn_excel" class="btnProject btn btnProject"><img class="icon_skill" src="icons/excel.png"> Excel</button>
+          <button type="button" id="btn_mysql" class="btnProject btn btnProject"><img class="icon_skill" src="icons/mysql.png"> MySQL</button>
+          <button type="button" id="btn_mysql_workbench" class="btnProject btn btnProject"><img class="icon_skill" src="icons/mwben.png"> MySQL Workbench</button>
+          <button type="button" id="btn_r" class="btnProject btn btnProject"><img class="icon_skill" src="icons/r.png"> R</button>
+          <button type="button" id="btn_rstudio" class="btnProject btn btnProject"><img class="icon_skill" src="icons/rs.png"> RStudio</button>
+          <button type="button" id="btn_web_development" class="btnProject btn btnProject"><img class="icon_skill" src="icons/webdev.png"> Web Development</button>
+          <button type="button" id="btn_nodejs" class="btnProject btn btnProject"><img class="icon_skill" src="icons/njs.png"> Node.js</button>
+          <button type="button" id="btn_expressjs" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ex.png"> Express.js</button>
+          <button type="button" id="btn_mongodb" class="btnProject btn btnProject"><img style="width:14px;" class="icon_skill" src="icons/mdb.png"> MongoDB</button>
+          <button type="button" id="btn_studio_3t" class="btnProject btn btnProject"><img class="icon_skill" src="icons/3t.png"> Studio 3T</button>
+          <button type="button" id="btn_html" class="btnProject btn btnProject"><img class="icon_skill" src="icons/html.png"> HTML</button>
+          <button type="button" id="btn_css" class="btnProject btn btnProject"><img class="icon_skill" src="icons/css.png"> CSS</button>
+          <button type="button" id="btn_javascript" class="btnProject btn btnProject"><img class="icon_skill" src="icons/js.png"> JavaScript</button>
+          <button type="button" id="btn_sublime_text" class="btnProject btn btnProject"><img class="icon_skill" src="icons/sublime.png"> Sublime Text</button>
+          <button type="button" id="btn_java" class="btnProject btn btnProject"><img class="icon_skill" src="icons/java.png"> Java</button>
+          <button type="button" id="btn_android_studio" class="btnProject btn btnProject"><img class="icon_skill" src="icons/java.png"> Android Studio</button>
+          <button type="button" id="btn_c++" class="btnProject btn btnProject"><img class="icon_skill" src="icons/c++.png"> C++</button>
+          <button type="button" id="btn_c" class="btnProject btn btnProject"><img class="icon_skill" src="icons/c.png"> C</button>
+          <button type="button" id="btn_codeblocks" class="btnProject btn btnProject"><img class="icon_skill" src="icons/cb.png"> CodeBlocks</button>
+          <button type="button" id="btn_arduino" class="btnProject btn btnProject"><img class="icon_skill" src="icons/arduino.png"> Arduino IDE</button>
+          <button type="button" id="btn_latex" class="btnProject btn btnProject"><img class="icon_skill" src="icons/over.png"> Latex</button>
+          <button type="button" id="btn_microsoft_word" class="btnProject btn btnProject"><img class="icon_skill" src="icons/word.png"> Microsoft Word</button>
+          <button type="button" id="btn_leadership" class="btnProject btn btnProject"><img class="icon_skill" src="icons/lead.png"> Leadership</button>
+          <button type="button" id="btn_problem_solving" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ps.png"> Problem Solving</button>
+          <button type="button" id="btn_communication" class="btnProject btn btnProject"><img class="icon_skill" src="icons/com.png"> Communication</button>
+          <button type="button" id="btn_audacity" class="btnProject btn btnProject"><img class="icon_skill" src="icons/aud.png"> Audacity</button>
+          <button type="button" id="btn_canva" class="btnProject btn btnProject"><img class="icon_skill" src="icons/canva.png"> Canva</button>
+          <button type="button" id="btn_lightroom" class="btnProject btn btnProject"><img class="icon_skill" src="icons/lr.png"> Adobe Lightroom</button>
+          <button type="button" id="btn_picsart" class="btnProject btn btnProject"><img style="width:35px;" class="icon_skill" src="icons/pics.png"> Picsart</button>
+          <button type="button" id="btn_ezdrummer" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ez.png"> EZ Drummer</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-5 section_gap" id="OtherActivities">
+        <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
+            <h3 class="text-white">Other Activities</h3>
+        </div>
+        <div class="text-center" style="margin-top: 20px;margin-bottom: 20px;">
+          <h6 style="color:#001F3F;">double click on any activity for more reference</h6>
+      </div>
+        <div class="container">
+          <div class="row">
+            <button type="button" id="btn_guitar" class="btn btnAchievement"><img class="icon_skill" src="icons/guitar.png"> Guitarist</button>
+            <button type="button" id="btn_drum" class="btn btnAchievement"><img class="icon_skill" src="icons/drums.png"> Drummer</button>
+            <button type="button" id="btn_body" class="btn btnAchievement"><img class="icon_skill" src="icons/body.png"> Body Building</button>
+            <button type="button" id="btn_boxer" class="btn btnAchievement"><img class="icon_skill" src="icons/boxer.png"> Boxing</button>
+            <button type="button" id="btn_ece" class="btn btnAchievement"><img class="icon_skill" src="icons/elec.png"> DIY Electronics Projects</button>
+            <button type="button" id="btn_ele" class="btn btnAchievement"><img class="icon_skill" src="icons/ele.png"> DIY Electrical Projects</button>
+            <button type="button" id="btn_music" class="btn btnAchievement"><img class="icon_skill" src="icons/music.png"> Music Creation</button>
+            <button type="button" id="btn_photo" class="btn btnAchievement"><img class="icon_skill" src="icons/image.png"> Photography</button>
+            <button type="button" id="btn_video" class="btn btnAchievement"><img class="icon_skill" src="icons/video.png"> Videography</button>
+            <button type="button" id="btn_photoe" class="btn btnAchievement"><img class="icon_skill" src="icons/imagee.png"> Photo Editing</button>
+            <button type="button" id="btn_videoe" class="btn btnAchievement"><img class="icon_skill" src="icons/videoe.png"> Video Editing</button> 
+            <button type="button" id="btn_audioe" class="btn btnAchievement"><img class="icon_skill" src="icons/audioe.png"> Audio Editing</button>
+          </div>  
+        </div>
+  </section>
+
+  <section class="bg-custom-light p-5 section_gap" id="Projectlist">
+        <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
+            <h3 class="text-white">Projects</h3>
+        </div>
+        <div class="container">
+            <h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
+            <div class="all_name" style="margin-top:20px;"><a class="all_name_in_one" href="projects/project1/project1.html"><h5 class="in_name" style="color: #001F3F;">Youtube UI Design</h5></a>
             </div>
-            <div class="col-md-6 col-3">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <button class="navbar-toggler ml-auto icona" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <div class="all_name"><a class="all_name_in_one" href="projects/project2/project2.html"><h5 class="in_name" style="color: black;">First Personal Website (test website)</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="projects/project3/project3.html"><h5 class="in_name" style="color: #001F3F;">Ecommerse website</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="projects/project4/project4.html"><h5 class="in_name" style="color: black;">Banglore home price prediction (regression model)</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="projects/project5/project5.html"><h5 class="in_name" style="color: #001F3F;">Personal Portfolio</h5></a></div>
+        </div>
+  </section>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link text-white" href="#Skills">Skills & Tools<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#OtherActivities">Other Activities</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#Projectlist">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#Achievementlist">Achievents</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#Hobbyproject">Hobby Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#Education">Education</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#Contact">Contact/Connect</a>
-                            </li>
-                        </ul>
+  <section class="bg-white p-5 section_gap" id="Achievementlist">
+        <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
+            <h3 class="text-white">Achievements</h3>
+        </div>
+        <div class="container">
+          <h6 class="text-center" style="color:#008080;">Click on any achievement to redirect to that achievement details</h6>
+            <div class="all_name_custom" style="margin-top:20px;"><a class="all_name_in_one" href="achievements/achievement1/achievement1.html"><h5 class="in_name" style="color: #001F3F;">Student Lead, Alumni Relations Cell CEC</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement2/achievement2.html"><h5 class="in_name" style="color: black;">President, PRODDEC CEC</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement3/achievement3.html"><h5 class="in_name" style="color: #001F3F;">Campus Ambassador, Techmaghi</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement4/achievement4.html"><h5 class="in_name" style="color: black;">Class Representative ( consecutive 3 years )</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement5/achievement5.html"><h5 class="in_name" style="color: #001F3F;">Data Collection Manager, Alumni Relation Cell CEC</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement6/achievement6.html"><h5 class="in_name" style="color: black;">PRO PRODDEC CEC</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement7/achievement7.html"><h5 class="in_name" style="color: #001F3F;">Social Media Manager, NSS CEC UNITS 128, 338, 184</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement8/achievement8.html"><h5 class="in_name" style="color: black;">Social Media Manager, IHRD Tharang ( National Level Tech Fest )</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement9/achievement9.html"><h5 class="in_name" style="color: #001F3F;">President, Team Karnasena ( Local welfare club )</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement10/achievement10.html"><h5 class="in_name" style="color: black;">Member of Sponsorship, Media, Organizing Committe IHRD Tharang ( National Level Tech Fest )</h5></a></div>
+            <div class="all_name_custom"><a class="all_name_in_one" href="achievements/achievement11/achievement11.html"><h5 class="in_name" style="color: #001F3F;">Campus Ambassador, Teachnook</h5></a></div>
+        </div>
+  </section>
+
+  <section class="bg-custom-light p-5 section_gap" id="Hobbyproject">
+        <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
+            <h3 class="text-white">Hobby Projects</h3>
+        </div>
+        <div class="container">
+          <h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
+            <div class="all_name" style="margin-top:20px;"><a class="all_name_in_one" href="Hobby/Hobby1/Hobby1.html"><h5 class="in_name" style="color: #001F3F;">Face recognition lock system</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby2/Hobby2.html"><h5 class="in_name" style="color: black;">Velocity sensitive electric drum set</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby3/Hobby3.html"><h5 class="in_name" style="color: #001F3F;">100 watts audio system</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby4/Hobby4.html"><h5 class="in_name" style="color: black;">Incubator</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby5/Hobby5.html"><h5 class="in_name" style="color: #001F3F;">Air cooler</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby6/Hobby6.html"><h5 class="in_name" style="color: black;">Studio for video recording</h5></a></div>
+        </div>
+  </section>
+
+  <section class="p-5 bg-wight section_gap" id="Education">
+        <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
+              <h3 class="text-center"style="color: white;">Education</h3>
+        </div>
+      <div class="container">
+          <div class="row">
+              <div class="edu_top col-md-12">
+                <button type="button" class="btn btn_edu bg-custom-light" >
+                  <p style="font-size:16px;">
+                    <span><a href="https://ceconline.edu/" target="_blank" class="bg_custom"><span style="font-size: 18px;">College Of Engineering Chengannur</span><a/></span><br>
+                    Bachelor of Technology - BTech<br>
+                    Computer Science Engineering<br>
+                    2020 - 2024<br>
+                  </p>
+                </button>
+              </div>
+               <div class="edu_top col-md-12">
+                <button type="button" class="btn btn_edu bg-custom-light">
+                  <p style="font-size:16px;color: black;">
+                    <span><a href="https://stratfordpublicschool.com/" target="_blank" class="bg_custom"><span style="font-size: 18px;">Stratford Public School and Junior College</span><a/></span><br>
+                    Grades  11 - 12<br>
+                    BioMaths<br>
+                    2017 - 2019<br>
+                  </p>
+                </button>
+              </div>
+               <div class="edu_top col-md-12">
+                <button type="button" class="btn btn_edu bg-custom-light">
+                  <p style="font-size:16px;color: black;">
+                    <span><a href="https://www.stthomas.edu.in/" target="_blank" class="bg_custom"><span style="font-size: 18px;">St.Thomas Residential Central School</span><a/></span><br>
+                    Grades  1 - 10<br>
+                    2007 - 2017<br>
+                  </p>
+                </button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="p-5 bg-custom-light section_gap" id="Contact">
+    <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
+          <h3 class="text-center"style="color: white;">Contact / Connect</h3>
+    </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div class="btn_social">
+                      <a href="https://linkedin.com/in/anandhu-mohan-21925220b" target="_blank" class="social-icon_linkedin">
+                          <i class="fab fa-linkedin fa-2x"></i>
+                          <h6>Linked In</h6>
+                      </a>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-	<section class="p-4" id="Home" style="margin-top: 150px;">
-        <div class="cover-container">
-            <img src="cover.jpg" alt="Cover Photo" class="cover-photo">
-             <div class="profile-container">
-                <img class="profile-picture" src="profile.jpg" alt="Profile Picture">
-            </div>
-        </div>
-        <div style="margin-top: 80px;">
-        	<p style="font-size: 16px;">Greetings! I'm Anandhu Mohan, a self-motivated individual with a passion for tackling challenges head-on and learning independently. As a natural leader, I've cultivated a diverse skill set, from training machine models and organizing data to excelling in web development.<br>
-
-			Away from the digital realm, I find joy in the analog world of music, having taught myself guitar and drums. Going beyond mere mastery, I've constructed my own drum set and guitar amplifier, reflecting my hands-on approach to both music and technical craftsmanship.<br>
-
-			In the realm of data science, I've dedicated myself to self-study, achieving proficiency in machine learning and data organization. Looking forward, my dream is to fuse my technical expertise with a keen interest in electric vehicles, IoT, and robotics to establish a groundbreaking company.<br>
-
-			Beyond the screen and the boardroom, I'm also a self-made bodybuilder. Drawing inspiration from YouTube videos, I've sculpted my physique through dedication and hard work, embodying the same tenacity that drives my professional pursuits.<br>
-
-			Furthermore, my fascination with space and rockets speaks to my insatiable curiosity about cutting-edge technologies that push the boundaries of human achievement.<br>
-
-			In a world shaped by innovation, I stand as a testament to the power of self-motivation, leadership, and continuous learning. Join me on this journey of bridging dreams with reality, where the possibilities are as limitless as the cosmos.</p>
-        </div>
-	</section>
-
-
-
-
-
-
-
-
-
-
-	<section class="bg-custom-light p-5 section_gap" id="Skills">
-	    <div class="text-center bg-light-blue rounded p-2" style="margin-bottom: 20px;">
-	      <h3 class="text-white">Skills & Tools</h3>
-	    </div>
-	    <div class="container">
-	      <div class="row">
-	      	<button type="button" class="btnProject btn btnProject"><img style="width:32px;" class="icon_skill" src="icons/ml.png"> Machine Learning</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/python.png"> Python</button>
-	        <button type="button" class="btnProject btn btnProject"><img style="width:40px;" class="icon_skill" src="icons/skl.png"> scikit-learn</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/chatgpt.png"> ChatGPT</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/pandas.png"> Pandas</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/numpy.png"> Numpy</button>
-	        <button type="button" class="btnProject btn btnProject"><img style="width:50px;" class="icon_skill" src="icons/mat.svg"> Matplotlib</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/aws.png"> AWS</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/winscp.png"> WinSCP</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/nginx.png"> nginx</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/git.png"> GitHub</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/pycharm.png"> PyCharm</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/vs.png"> Visual Studio</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/excel.png"> Excel</button>
-	        <button type="button" class="btnProject btn btnProject"><img  class="icon_skill" src="icons/mysql.png"> MySQL</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/mwben.png"> MySQL Workbench</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/r.png"> R</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/rs.png"> RStudio</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/webdev.png"> Web Development</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/njs.png"> Node.js</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ex.png"> Express.js</button>
-	        <button type="button" class="btnProject btn btnProject"><img style="width:14px;" class="icon_skill" src="icons/mdb.png"> MongoDB</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/3t.png"> Studio 3T</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/html.png"> HTML</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/css.png"> CSS</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/js.png"> JavaScript</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/sublime.png"> Sublime Text</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/java.png"> Java</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/c++.png"> C++</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/c.png"> C</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/cb.png"> CodeBlocks</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/arduino.png"> Arduino IDE</button>
-	        <button type="button" class="btnProject btn btnProject"><img  class=" icon_skill" src="icons/over.png"> Latex</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/word.png"> Microsoft Word</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/lead.png"> Leadership</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ps.png"> Problem Solving</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/com.png"> Communication</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/aud.png"> Audacity</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/canva.png"> Canva</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/lr.png"> Adobe Lightroom</button>
-	        <button type="button" class="btnProject btn btnProject"><img style="width:35px;" class="icon_skill" src="icons/pics.png"> Picsart</button>
-	        <button type="button" class="btnProject btn btnProject"><img class="icon_skill" src="icons/ez.png"> EZ Drummer</button>
-	      </div>
-	    </div>
-	  </section>
-
-
-
-
-
-
-
-
-
-
-	<section class="bg-white p-5 section_gap" id="OtherActivities">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Other Activities</h3>
-	    </div>
-		<div class="container">
-			<div class="row">
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/guitar.png"> Guitarist</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/drums.png"> Drummer</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/body.png"> Body Builder</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/boxer.png"> Boxer</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/elec.png"> DIY Electronics Projects</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/ele.png"> DIY Electrical Projects</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/music.png"> Music Creation</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/image.png"> Photography</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/video.png"> Videography</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/imagee.png"> Photo Editing</button>
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/videoe.png"> Video Editing</button>	
-				<button type="button" class="btn btnAchievement"><img class="icon_skill" src="icons/audioe.png"> Audio Editing</button>
-			</div> 	
-		</div>
-	</section>
-
-
-
-
-
-
-
-
-
-	<section class="bg-custom-light p-5 section_gap" id="Projectlist">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Projects</h3>
-	    </div>
-		<div class="container">
-				<h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
-				<a class="" href="projects/project1/project1.html"><h5 style="color: #001F3F;margin-top: 30px;">Youtube UI Design</h5></a>
-			 	<a class="" href="projects/project2/project2.html"><h5 style="color: black;">First Personal Website (test website)</h5></a>
-			 	<a class="" href="projects/project3/project3.html"><h5 style="color: #001F3F;">Ecommerse website</h5></a>
-			 	<a class="" href="projects/project4/project4.html"><h5 style="color: black;">Banglore home price prediction (regression model)</h5></a>
-			 	<a class="" href="projects/project5/project5.html"><h5 style="color: #001F3F;">Personal Portfolio</h5></a>
-		</div>
-	</section>
-
-
-
-
-
-
-
-
-
-	<section class="bg-white p-5 section_gap" id="Achievementlist">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Achievements</h3>
-	    </div>
-		<div class="container">
-			<h6 class="text-center" style="color:#008080;">Click on any achievement to redirect to that achievement details</h6>
-			 	<a class="" href="achievements/achievement1/achievement1.html"><h5 style="color: #001F3F;margin-top: 30px;">Student Lead, Alumni Relations Cell CEC</h5></a>
-			 	<a class="" href="achievements/achievement2/achievement2.html"><h5 style="color: black;">President, PRODDEC CEC</h5></a>
-			 	<a class="" href="achievements/achievement3/achievement3.html"><h5 style="color: #001F3F;">Campus Ambassador, Techmaghi</h5></a>
-			 	<a class="" href="achievements/achievement4/achievement4.html"><h5 style="color: black;">Class Representative ( consecutive 3 years )</h5></a>
-			 	<a class="" href="achievements/achievement5/achievement5.html"><h5 style="color: #001F3F;">Data Collection Manager, Alumni Relation Cell CEC</h5></a>
-				<a class="" href="achievements/achievement6/achievement6.html"><h5 style="color: black;">PRO PRODDEC CEC</h5></a>
-				<a class="" href="achievements/achievement7/achievement7.html"><h5 style="color: #001F3F;">Social Media Manager, NSS CEC UNITS 128, 338, 184</h5></a>
-				<a class="" href="achievements/achievement8/achievement8.html"><h5 style="color: black;">Social Media Manager, IHRD Tharang ( National Level Tech Fest )</h5></a>
-				<a class="" href="achievements/achievement9/achievement9.html"><h5 style="color: #001F3F;">President, Team Karnasena ( Local welfare club )</h5></a>
-				<a class="" href="achievements/achievement10/achievement10.html"><h5 style="color: black;">Member of Sponsorship, Media, Organizing Committe IHRD Tharang ( National Level Tech Fest )</h5></a>
-				<a class="" href="achievements/achievement11/achievement11.html"><h5 style="color: black;">Campus Ambassador, Teachnook</h5></a>
-		</div>
-	</section>
-
-
-
-
-
-
-
-
-
-	<section class="bg-custom-light p-5 section_gap" id="Hobbyproject">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-	     	<h3 class="text-white">Hobby Projects</h3>
-	    </div>
-		<div class="container">
-			<h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
-			 	<a class="" href="Hobby/Hobby1/Hobby1.html"><h5 style="color: black;margin-top: 30px;">Face recognition lock system</h5></a>
-			 	<a class="" href="Hobby/Hobby2/Hobby2.html"><h5 style="color: black;">Velocity sensitive electric drum set</h5></a>
-			 	<a class="" href="Hobby/Hobby3/Hobby3.html"><h5 style="color: black;">100 watts audio system</h5></a>
-			 	<a class="" href="Hobby/Hobby4/Hobby4.html"><h5 style="color: black;">Incubator</h5></a>
-			 	<a class="" href="Hobby/Hobby5/Hobby5.html"><h5 style="color: black;">Air cooler</h5></a>
-			 	<a class="" href="Hobby/Hobby6/Hobby6.html"><h5 style="color: black;">Studio for video recording</h5></a>
-		</div>
-	</section>
-
-
-
-
-
-
-
-
-
-	<section class="p-5 bg-wight section_gap" id="Education">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
-        	<h3 class="text-center"style="color: white;">Education</h3>
-    	</div>
-	    <div class="container">
-	        <div class="row">
-	            <div class="edu_top col-md-12">
-	            	<button type="button" class="btn btn_edu bg-custom-light" >
-		            	<p style="font-size:16px;">
-		            		<span><a href="https://ceconline.edu/" target="_blank" class="bg_custom"><span style="font-size: 18px;">College Of Engineering Chengannur</span><a/></span><br>
-		            		Bachelor of Technology - BTech<br>
-		            		Computer Science Engineering<br>
-		            		2020 - 2024<br>
-		            	</p>
-	            	</button>
-	            </div>
-	             <div class="edu_top col-md-12">
-	             	<button type="button" class="btn btn_edu bg-custom-light">
-		            	<p style="font-size:16px;color: black;">
-		            		<span><a href="https://stratfordpublicschool.com/" target="_blank" class="bg_custom"><span style="font-size: 18px;">Stratford Public School and Junior College</span><a/></span><br>
-		            		Grades  11 - 12<br>
-		            		BioMaths<br>
-		            		2017 - 2019<br>
-		            	</p>
-	            	</button>
-	            </div>
-	             <div class="edu_top col-md-12">
-	             	<button type="button" class="btn btn_edu bg-custom-light">
-		            	<p style="font-size:16px;color: black;">
-		            		<span><a href="https://www.stthomas.edu.in/" target="_blank" class="bg_custom"><span style="font-size: 18px;">St.Thomas Residential Central School</span><a/></span><br>
-		            		Grades  1 - 10<br>
-		            		2007 - 2017<br>
-		            	</p>
-	            	</button>
-	            </div>
-	        </div>
-	    </div>
-	</section>
-
-
-
-
-
-
-
-
-
-	<section class="p-5 bg-custom-light section_gap" id="Contact">
-		<div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
-        	<h3 class="text-center"style="color: white;">Contact / Connect</h3>
-    	</div>
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-md-12 text-center">
-	                <a href="https://linkedin.com/in/anandhu-mohan-21925220b" target="_blank" class="social-icon_linkedin">
-	                    <i class="fab fa-linkedin fa-2x"></i>
-	                    <h6>Linked In</h6>
-	                </a>
-	
-	                <a href="https://github.com/Anandhu1228" target="_blank" class="social-icon_github">
-	                    <i class="fab fa-github fa-2x"></i>
-	                    <h6>GitHub</h6>
-	                </a>
-	
-	                <a href="https://www.instagram.com/_anandhu__m__1228/" target="_blank" class="social-icon_instagram">
-	                    <i class="fab fa-instagram fa-2x"></i>
-	                    <h6>Instagram</h6>
-	                </a>
-	
-	                 <p style="margin-top: 20px;"><a onclick="openMailbox()">Email: <span class="mail_me">anandhumohan2018@gmail.com</span></a></p>
-	                <p>Phone: +91 8138849120</p>
-	            </div>
-	        </div>
-	    </div>
-	</section>
-
-
-
-
-
-
-
-
-
-
-	<footer class="bg_custom_footer section_gap" style="height: 80px;">
-	    <div class="container d-flex align-items-center justify-content-center h-100">
-	        <h5 class="text-center text-white">Thank you and have a great day</h5>
-	    </div>
-	</footer>
-	
-
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://kit.fontawesome.com/02f66249c3.js" crossorigin="anonymous"></script>
-
-		<script>
-	    document.addEventListener("DOMContentLoaded", function () {
-	        document.querySelectorAll('a.nav-link').forEach(function (link) {
-	            link.addEventListener('click', function (e) {
-	                e.preventDefault();
-
-	                var targetSectionId = this.getAttribute('href').substring(1);
-	                var targetSection = document.getElementById(targetSectionId);
-
-	                if (targetSection) {
-	                    var offset = targetSection.offsetTop - document.querySelector('.fixed-top').offsetHeight;
-
-	                    window.scrollTo({
-	                        top: offset,
-	                        behavior: 'smooth'
-	                    });
-
-	                    // Remove hash from the URL
-	                    history.replaceState(null, null, ' ');
-	                }
-	            });
-	        });
-
-	        if (window.location.hash) {
-	            var targetSectionId = window.location.hash.substring(1);
-	            var targetSection = document.getElementById(targetSectionId);
-
-	            if (targetSection) {
-	                var offset = targetSection.offsetTop - document.querySelector('.fixed-top').offsetHeight;
-
-	                window.scrollTo({
-	                    top: offset,
-	                    behavior: 'smooth'
-	                });
-
-	                // Remove hash from the URL
-	                history.replaceState(null, null, ' ');
-	            }
-	        }
-	    });
-	</script>
-
-
-	<script>
-	    function openMailbox() {
-	        var shouldSend = confirm("Do you want to send an email?");
-	        
-	        if (shouldSend) {
-	           
-	            var recipientEmail = "anandhumohan2018@gmail.com";
-	            
-	            var mailtoLink = "mailto:" + recipientEmail;
-	            
-	            window.location.href = mailtoLink;
-	        }
-	        
-	        return false;
-	    }
-	</script>
-
-
-
-
+                    <div class="btn_social">
+                      <a href="https://github.com/Anandhu1228" target="_blank" class="social-icon_github">
+                          <i class="fab fa-github fa-2x"></i>
+                          <h6>GitHub</h6>
+                      </a>
+                    </div>
+                    <div class="btn_social">
+                      <a href="https://www.instagram.com/_anandhu__m__1228/" target="_blank" class="social-icon_instagram">
+                          <i class="fab fa-instagram fa-2x"></i>
+                          <h6>Instagram</h6>
+                      </a>
+                    </div>
+                       <p style="margin-top: 20px;"><a onclick="openMailbox()">Email: <span class="mail_me">anandhumohan2018@gmail.com</span></a></p>
+                      <p>Phone: +91 8138849120</p>
+                  </div>
+              </div>
+          </div>
+  </section>
+
+  <footer class="bg_custom_footer section_gap" style="height: 80px;">
+      <div class="container d-flex align-items-center justify-content-center h-100">
+          <h5 class="text-center text-white">Thank you and have a great day</h5>
+      </div>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/02f66249c3.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a.nav-link').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var targetSectionId = this.getAttribute('href').substring(1);
+                var targetSection = document.getElementById(targetSectionId);
+                if (targetSection) {
+                    var offset = targetSection.offsetTop - document.querySelector('.fixed-top').offsetHeight;
+                    window.scrollTo({
+                        top: offset,
+                        behavior: 'smooth'
+                    });
+                    history.replaceState(null, null, ' ');
+                }
+            });
+        });
+        if (window.location.hash) {
+            var targetSectionId = window.location.hash.substring(1);
+            var targetSection = document.getElementById(targetSectionId);
+            if (targetSection) {
+                var offset = targetSection.offsetTop - document.querySelector('.fixed-top').offsetHeight;
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth'
+                });
+                history.replaceState(null, null, ' ');
+            }
+        }
+    });
+  </script>
+  <script>
+      function openMailbox() {
+          var shouldSend = confirm("Do you want to send an email?");
+          if (shouldSend) {
+              var recipientEmail = "anandhumohan2018@gmail.com";
+              var mailtoLink = "mailto:" + recipientEmail;
+              window.location.href = mailtoLink;
+          }
+          return false;
+      }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function handleDoubleClick(event) {
+        if (event.target.tagName === 'BUTTON') {
+          const buttonId = event.target.id;
+          switch (buttonId) {
+            case 'btn_machine_learning':
+              window.location.href = 'skills/machine_learning/machine_learning.html';
+              break;
+            case 'btn_python':
+              window.location.href = 'skills/python/python.html';
+              break;
+            case 'btn_scikit_learn':
+              window.location.href = 'skills/scikit_learn/scikit_learn.html';
+              break;
+            case 'btn_chatgpt':
+              window.location.href = 'skills/chatgpt/chatgpt.html';
+              break;
+            case 'btn_pandas':
+              window.location.href = 'skills/pandas/pandas.html';
+              break;
+            case 'btn_numpy':
+              window.location.href = 'skills/numpy/numpy.html';
+              break;
+            case 'btn_matplotlib':
+              window.location.href = 'skills/matplotlib/matplotlib.html';
+              break;
+            case 'btn_aws':
+              window.location.href = 'skills/aws/aws.html';
+              break;
+            case 'btn_winscp':
+              window.location.href = 'skills/winscp/winscp.html';
+              break;
+            case 'btn_nginx':
+              window.location.href = 'skills/nginx/nginx.html';
+              break;
+            case 'btn_github':
+              window.location.href = 'skills/github/github.html';
+              break;
+            case 'btn_pycharm':
+              window.location.href = 'skills/pycharm/pycharm.html';
+              break;
+            case 'btn_visual_studio':
+              window.location.href = 'skills/visual_studio/visual_studio.html';
+              break;
+            case 'btn_excel':
+              window.location.href = 'skills/excel/excel.html';
+              break;
+            case 'btn_mysql':
+              window.location.href = 'skills/mysql/mysql.html';
+              break;
+            case 'btn_mysql_workbench':
+              window.location.href = 'skills/mysql_workbench/mysql_workbench.html';
+              break;
+            case 'btn_r':
+              window.location.href = 'skills/r/r.html';
+              break;
+            case 'btn_rstudio':
+              window.location.href = 'skills/rstudio/rstudio.html';
+              break;
+            case 'btn_web_development':
+              window.location.href = 'skills/web_development/web_development.html';
+              break;
+            case 'btn_nodejs':
+              window.location.href = 'skills/nodejs/nodejs.html';
+              break;
+            case 'btn_expressjs':
+              window.location.href = 'skills/express/express.html';
+              break;
+            case 'btn_mongodb':
+              window.location.href = 'skills/mongodb/mongodb.html';
+              break;
+            case 'btn_studio_3t':
+              window.location.href = 'skills/studio_3t/studio_3t.html';
+              break;
+            case 'btn_html':
+              window.location.href = 'skills/html/html.html';
+              break;
+            case 'btn_css':
+              window.location.href = 'skills/css/css.html';
+              break;
+            case 'btn_javascript':
+              window.location.href = 'skills/javascript/javascript.html';
+              break;
+            case 'btn_sublime_text':
+              window.location.href = 'skills/sublime_text/sublime_text.html';
+              break;
+            case 'btn_java':
+              window.location.href = 'skills/java/java.html';
+              break;
+            case 'btn_android_studio':
+              window.location.href = 'skills/android_studio/android_studio.html';
+              break;
+            case 'btn_c++':
+              window.location.href = 'skills/c++/c++.html';
+              break;
+            case 'btn_c':
+              window.location.href = 'skills/c/c.html';
+              break;
+            case 'btn_codeblocks':
+              window.location.href = 'skills/codeblocks/codeblocks.html';
+              break;
+            case 'btn_arduino':
+              window.location.href = 'skills/arduino/arduino.html';
+              break;
+            case 'btn_latex':
+              window.location.href = 'skills/latex/latex.html';
+              break;
+            case 'btn_microsoft_word':
+              window.location.href = 'skills/microsoft_word/microsoft_word.html';
+              break;
+            case 'btn_leadership':
+              window.location.href = 'skills/leadership/leadership.html';
+              break;
+            case 'btn_problem_solving':
+              window.location.href = 'skills/problem_solving/problem_solving.html';
+              break;
+            case 'btn_communication':
+              window.location.href = 'skills/communication/communication.html';
+              break;
+            case 'btn_audacity':
+              window.location.href = 'skills/audacity/audacity.html';
+              break;
+            case 'btn_canva':
+              window.location.href = 'skills/canva/canva.html';
+              break;
+            case 'btn_lightroom':
+              window.location.href = 'skills/lightroom/lightroom.html';
+              break;
+            case 'btn_picsart':
+              window.location.href = 'skills/picsart/picsart.html';
+              break;
+            case 'btn_ezdrummer':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_guitar':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_drum':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_body':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_boxer':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_ece':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_ele':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_music':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_photo':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_video':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_photoe':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_videoe':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            case 'btn_audioe':
+              window.location.href = 'skills/ezdrummer/ezdrummer.html';
+              break;
+            default:
+              console.log('Button not handled:', buttonId);
+          }
+        }
+      }
+      const skillsSection = document.getElementById('Skills');
+      skillsSection.addEventListener('dblclick', handleDoubleClick);
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function handleDoubleClick(event) {
+        if (event.target.tagName === 'BUTTON') {
+          const buttonId = event.target.id;
+          switch (buttonId) {
+            
+            case 'btn_guitar':
+              window.location.href = 'otheractivities/guitar/guitar.html';
+              break;
+            case 'btn_drum':
+              window.location.href = 'otheractivities/drum/drum.html';
+              break;
+            case 'btn_body':
+              window.location.href = 'otheractivities/body/body.html';
+              break;
+            case 'btn_boxer':
+              window.location.href = 'otheractivities/boxer/boxer.html';
+              break;
+            case 'btn_ece':
+              window.location.href = 'otheractivities/ece/ece.html';
+              break;
+            case 'btn_ele':
+              window.location.href = 'otheractivities/ele/ele.html';
+              break;
+            case 'btn_music':
+              window.location.href = 'otheractivities/music/music.html';
+              break;
+            case 'btn_photo':
+              window.location.href = 'otheractivities/photo/photo.html';
+              break;
+            case 'btn_video':
+              window.location.href = 'otheractivities/video/video.html';
+              break;
+            case 'btn_photoe':
+              window.location.href = 'otheractivities/photoe/photoe.html';
+              break;
+            case 'btn_videoe':
+              window.location.href = 'otheractivities/videoe/videoe.html';
+              break;
+            case 'btn_audioe':
+              window.location.href = 'otheractivities/audioe/audioe.html';
+              break;
+            default:
+              console.log('Button not handled:', buttonId);
+          }
+        }
+      }
+      const skillsSection = document.getElementById('OtherActivities');
+      skillsSection.addEventListener('dblclick', handleDoubleClick);
+    });
+  </script>
 
 </body>
 </html>
