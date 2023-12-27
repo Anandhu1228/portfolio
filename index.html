@@ -210,6 +210,15 @@
     .drop_dop:hover {
       transform: scale(1.1);
     }
+    #tooltip {
+      display: none;
+      width: 220px;
+      position: absolute;
+      background-color: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 
@@ -732,6 +741,25 @@
       const skillsSection = document.getElementById('OtherActivities');
       skillsSection.addEventListener('dblclick', handleDoubleClick);
     });
+  </script>
+  <script>
+      var tooltipTimeout;
+      function showTooltip() {
+        var button = event.target;
+        var tooltip = document.getElementById('tooltip');
+        var rect = button.getBoundingClientRect();
+        var topPosition = rect.bottom + 5 + window.scrollY; // Include scroll position
+        var leftPosition = rect.left;
+        tooltip.style.top = topPosition + 'px';
+        tooltip.style.left = leftPosition + 'px';
+        tooltip.style.display = 'block';
+        tooltipTimeout = setTimeout(hideTooltip, 3000);
+      }
+      function hideTooltip() {
+        var tooltip = document.getElementById('tooltip');
+        tooltip.style.display = 'none';
+        clearTimeout(tooltipTimeout);
+      }
   </script>
 
 </body>
