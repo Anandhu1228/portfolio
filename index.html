@@ -46,7 +46,7 @@
       height: 400px;
       border-radius: 50%;
       object-fit: cover;
-      margin-left: 20px;
+      
     }
     .profile-container {
       display: flex;
@@ -58,7 +58,7 @@
     @media only screen and (max-width: 1000px) {
       .cover-photo {
         height: 30%;
-	content: url('cover1.jpg');
+  content: url('cover1.jpg');
       }
       .profile-container {
         margin-top: 200px;
@@ -216,7 +216,7 @@
       height: 100%;
       margin: 0;
     }
-	  @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1000px) {
       .in_name {
         font-size: 17px;
       }
@@ -237,22 +237,22 @@
     .drop_dop:hover {
       transform: scale(1.1);
     }
-		.custom-div {
-			font-size: 16px;
+    .custom-div {
+      font-size: 16px;
       word-wrap: break-word;
-	    white-space: normal;
-		}
-		.custom-span {
-			font-size: 18px;
-		}
-		@media (max-width: 767px) {
-			.custom-div {
-	      font-size: 14px;
-	    }
-	    .custom-span {
-	      font-size: 16px;
-	    }
-		}
+      white-space: normal;
+    }
+    .custom-span {
+      font-size: 18px;
+    }
+    @media (max-width: 767px) {
+      .custom-div {
+        font-size: 14px;
+      }
+      .custom-span {
+        font-size: 16px;
+      }
+    }
     #tooltip {
       display: none;
       width: 220px;
@@ -262,62 +262,128 @@
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+     .align-self-start {
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.main_caption{
+  font-size: 15px;
+}
+
+    #Home{
+      margin-top: 150px;
+    }
+    .p_in_home{
+      margin-top: 80px;
+    }
+    .p_in_p_home{
+      font-size: 16px; 
+      line-height: 1.95;
+      margin: 40px;
+    }.Main_name{
+      font-size: 25px;
+    }
+
+    @media (max-width: 1000px){
+      .cover-container{
+        padding: 0px;
+      }
+      #Home{
+      margin-top: 110px;
+      padding: 0px;
+    }
+    .p_in_p_home{
+      font-size: 15px; 
+      line-height: 1.95;
+      margin: 30px;
+    }
+    .Main_name{
+      font-size: 24px;
+    }
+    }
+     @media (max-width: 991px) {
+      .navbar-expand-lg .navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        padding-left: 40px;
+        padding-top: 40px;
+        left: -250px; /* Adjust as needed */
+        width: 70%; /* Adjust as needed */
+        background-color: #001F3F; 
+        transition: all 0.3s ease;
+      }
+
+      .navbar-expand-lg .navbar-collapse.show {
+        left: 0;
+      }
+
+      .icona {
+        margin-left: auto;
+        background-color: rgba(82, 86, 101, 0.759);
+        color: white;
+        margin-right: 25pxpx; /* Adjust as needed */
+      }
+    }
+   
+
   </style>
 </head>
 
 <body>
-  <div class="fixed-top">
-      <header class="bg-custom_header">
-          <div class="row text-white">
-              <div class="col-md-6 col-9 p-3 pl-5">
-                <a class="" href="#Home"><h3 style="color: white;">Anandhu Mohan</h3></a>
-                  <p style="font-size: 15px;">Do It Yourself</p>
-              </div>
-              <div class="col-md-6 col-3">
-                  <nav class="navbar navbar-expand-lg navbar-light">
-                      <button class="navbar-toggler ml-auto icona" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav ml-auto">
-                              <li class="nav-item active">
-                                  <a class="nav-link text-white drop_dop" href="#Skills">Skills & Tools<span class="sr-only">(current)</span></a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link text-white drop_dop" href="#OtherActivities">Other Activities</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link text-white drop_dop" href="#Projectlist">Projects</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link text-white drop_dop" href="#Achievementlist">Achievents</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link text-white drop_dop" href="#Hobbyproject">Hobby Projects</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link text-white drop_dop" href="#Education">Education</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link text-white drop_dop" href="#Contact">Contact/Connect</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </nav>
-              </div>
-          </div>
-      </header>
+   <div class="fixed-top">
+    <header class="bg-custom_header">
+      <div class="row text-white">
+        <div class="col-md-6 col-9 p-3 pl-5">
+          <a class="Main_name" href="#Home"><h3 style="color: white;">Anandhu Mohan</h3></a>
+          <p class="main_caption">Do It Yourself</p>
+        </div>
+        <div class="col-md-6 col-3">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler ml-auto icona" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link text-white drop_dop" href="#Skills">Skills & Tools<span class="sr-only">(current)</span></a>
+                </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white drop_dop" href="#OtherActivities">Other Activities</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white drop_dop" href="#Projectlist">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white drop_dop" href="#Achievementlist">Achievents</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white drop_dop" href="#Hobbyproject">Hobby Projects</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white drop_dop" href="#Education">Education</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white drop_dop" href="#Contact">Contact/Connect</a>
+                  </li>
+               </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
   </div>
 
-  <section class="p-4" id="Home" style="margin-top: 150px;">
+
+  <section  id="Home">
     <div class="cover-container">
         <img src="cover.jpg" alt="Cover Photo" class="cover-photo">
          <div class="profile-container">
             <img class="profile-picture" src="profile.jpg" alt="Profile Picture">
         </div>
     </div>
-    <div style="margin-top: 80px;">
-      <p style="font-size: 16px; line-height: 1.95;">Greetings! I'm Anandhu Mohan, a self-motivated individual with a passion for tackling challenges head-on and learning independently. As a natural leader, I've cultivated a diverse skill set, from training machine models and organizing data to excelling in web development.<br>
+    <div class="p_in_home" >
+      <p class="p_in_p_home">Greetings! I'm Anandhu Mohan, a self-motivated individual with a passion for tackling challenges head-on and learning independently. As a natural leader, I've cultivated a diverse skill set, from training machine models and organizing data to excelling in web development.<br>
 
       Away from the digital realm, I find joy in the analog world of music, having taught myself guitar and drums. Going beyond mere mastery, I've constructed my own drum set and guitar amplifier, reflecting my hands-on approach to both music and technical craftsmanship.<br>
 
@@ -404,8 +470,8 @@
             <button type="button" id="btn_drum" class="btn btnAchievement"><img class="icon_skill" src="icons/drums.png"> Drummer</button>
             <button type="button" id="btn_body" class="btn btnAchievement"><img class="icon_skill" src="icons/body.png"> Body Building</button>
             <button type="button" id="btn_boxer" class="btn btnAchievement"><img class="icon_skill" src="icons/boxer.png"> Boxing</button>
-            <button type="button" id="btn_ece" class="btn btnAchievement"><img class="icon_skill" src="icons/elec.png"><img class="icon_skill" src="icons/ele.png"> DIY Electronics and Electrical Projects</button>
-						<button type="button" id="btn_flute" class="btn btnAchievement"><img class="icon_skill" src="icons/flute.png"> Flutist</button>
+            <button type="button" id="btn_ece" class="btn btnAchievement"><img class="icon_skill" src="icons/elec.png"><img class="icon_skill" src="icons/ele.png"> DIY Projects</button>
+            <button type="button" id="btn_flute" class="btn btnAchievement"><img class="icon_skill" src="icons/flute.png"> Flutist</button>
             <button type="button" id="btn_music" class="btn btnAchievement"><img class="icon_skill" src="icons/music.png"> Music Creation</button>
             <button type="button" id="btn_photo" class="btn btnAchievement"><img class="icon_skill" src="icons/image.png"> Photography</button>
             <button type="button" id="btn_video" class="btn btnAchievement"><img class="icon_skill" src="icons/video.png"> Videography</button>
@@ -422,11 +488,12 @@
         </div>
         <div class="container">
             <h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
+             <div class="all_name"><a class="all_name_in_one" href="projects/project6/project6.html"><h5 class="in_name" style="color: #001F3F;">Student Alumni Relations Portal</h5></a></div>
+             <div class="all_name"><a class="all_name_in_one" href="projects/project4/project4.html"><h5 class="in_name" style="color: black;">Banglore home price prediction (regression model)</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="projects/project3/project3.html"><h5 class="in_name" style="color: #001F3F;">Ecommerse website</h5></a></div>
             <div class="all_name" style="margin-top:20px;"><a class="all_name_in_one" href="projects/project1/project1.html"><h5 class="in_name" style="color: #001F3F;">Youtube UI Design</h5></a>
             </div>
             <div class="all_name"><a class="all_name_in_one" href="projects/project2/project2.html"><h5 class="in_name" style="color: black;">First Personal Website (test website)</h5></a></div>
-            <div class="all_name"><a class="all_name_in_one" href="projects/project3/project3.html"><h5 class="in_name" style="color: #001F3F;">Ecommerse website</h5></a></div>
-            <div class="all_name"><a class="all_name_in_one" href="projects/project4/project4.html"><h5 class="in_name" style="color: black;">Banglore home price prediction (regression model)</h5></a></div>
             <div class="all_name"><a class="all_name_in_one" href="projects/project5/project5.html"><h5 class="in_name" style="color: #001F3F;">Personal Portfolio</h5></a></div>
         </div>
   </section>
@@ -459,7 +526,9 @@
           <h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
             <div class="all_name" style="margin-top:20px;"><a class="all_name_in_one" href="Hobby/Hobby1/Hobby1.html"><h5 class="in_name" style="color: #001F3F;">Face recognition lock system</h5></a></div>
             <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby2/Hobby2.html"><h5 class="in_name" style="color: black;">Velocity sensitive electric drum set</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby7/Hobby7.html"><h5 class="in_name" style="color: black;">Upgraded velocitive sensitive electric drum set</h5></a></div>
             <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby3/Hobby3.html"><h5 class="in_name" style="color: #001F3F;">100 watts audio system</h5></a></div>
+            <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby3/Hobby3.html"><h5 class="in_name" style="color: #001F3F;">150 watts tower audio system</h5></a></div>
             <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby4/Hobby4.html"><h5 class="in_name" style="color: black;">Incubator</h5></a></div>
             <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby5/Hobby5.html"><h5 class="in_name" style="color: #001F3F;">Air cooler</h5></a></div>
             <div class="all_name"><a class="all_name_in_one" href="Hobby/Hobby6/Hobby6.html"><h5 class="in_name" style="color: black;">Studio for video recording</h5></a></div>
@@ -470,38 +539,38 @@
         <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
               <h3 class="text-center"style="color: white;">Education</h3>
         </div>
-      	<div class="container">
+        <div class="container">
           <div class="row">
-						<div class="edu_top col-md-12">
-							<button type="button" class="btn btn_edu bg-custom-light">
-									<div class="custom-div">
-											<span><a href="https://ceconline.edu/" target="_blank" class="bg_custom"><span class="custom-span">College Of Engineering Chengannur</span></a></span><br>
-											Bachelor of Technology - BTech<br>
-											Computer Science Engineering<br>
-											2020 - 2024<br>
-									</div>
-							</button>
-						</div>
-						 <div class="edu_top col-md-12">
-							<button type="button" class="btn btn_edu bg-custom-light">
-									<div class="custom-div">
-											<span><a href="https://stratfordpublicschool.com/" target="_blank" class="bg_custom"><span class="custom-span">Stratford Public School and Junior College</span></a></span><br>
-											Grade 11 and 12<br>
-											Bio - Maths<br>
-											2017 - 2019<br>
-									</div>
-							</button>
-						</div>
-						 <div class="edu_top col-md-12">
-							<button type="button" class="btn btn_edu bg-custom-light">
-									<div class="custom-div">
-											<span><a href="https://www.stthomas.edu.in/" target="_blank" class="bg_custom"><span class="custom-span">ST.Thomas Residential Central School</span></a></span><br>
-											Grade 1 to 10<br>
-											2007 - 2017<br>
-									</div>
-							</button>
-						</div>
-				</div>
+            <div class="edu_top col-md-12">
+              <button type="button" class="btn btn_edu bg-custom-light">
+                  <div class="custom-div">
+                      <span><a href="https://ceconline.edu/" target="_blank" class="bg_custom"><span class="custom-span">College Of Engineering Chengannur</span></a></span><br>
+                      Bachelor of Technology - BTech<br>
+                      Computer Science Engineering<br>
+                      2020 - 2024<br>
+                  </div>
+              </button>
+            </div>
+             <div class="edu_top col-md-12">
+              <button type="button" class="btn btn_edu bg-custom-light">
+                  <div class="custom-div">
+                      <span><a href="https://stratfordpublicschool.com/" target="_blank" class="bg_custom"><span class="custom-span">Stratford Public School and Junior College</span></a></span><br>
+                      Grade 11 and 12<br>
+                      Bio - Maths<br>
+                      2017 - 2019<br>
+                  </div>
+              </button>
+            </div>
+             <div class="edu_top col-md-12">
+              <button type="button" class="btn btn_edu bg-custom-light">
+                  <div class="custom-div">
+                      <span><a href="https://www.stthomas.edu.in/" target="_blank" class="bg_custom"><span class="custom-span">ST.Thomas Residential Central School</span></a></span><br>
+                      Grade 1 to 10<br>
+                      2007 - 2017<br>
+                  </div>
+              </button>
+            </div>
+        </div>
       </div>
   </section>
   
@@ -762,7 +831,7 @@
             case 'btn_ece':
               window.location.href = 'otheractivities/ece/ece.html';
               break;
-							case 'btn_flute':
+              case 'btn_flute':
               window.location.href = 'otheractivities/flute/flute.html';
               break;
             case 'btn_music':
