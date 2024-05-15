@@ -150,6 +150,9 @@
     .btnAchievement{
       background-color: #008080;
       color: white;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
       transition: background-color 0.8s ease, color 0.8s ease;
     }
     .btnAchievement:hover {
@@ -298,8 +301,14 @@
       margin: 30px;
     }
     .Main_name{
-      font-size: 24px;
+      font-size: 25px;
+      margin-bottom: 0px;
     }
+    .headings{
+      font-size: 25px;
+      margin-bottom: 0px;
+    }
+
     }
      @media (max-width: 991px) {
       .navbar-expand-lg .navbar-collapse {
@@ -325,11 +334,24 @@
         margin-right: 25pxpx; /* Adjust as needed */
       }
     }
-     @media (max-width: 420px) {
-        .Main_name{
-      font-size: 20px;
-    }
+     @media (max-width: 440px) {
+        .icona {
+        padding-left: 8px; /* Adjust as needed */
+        padding-right: 8px;
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
+      .btnProject {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    .btnAchievement{
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    }
    
 
   </style>
@@ -340,7 +362,7 @@
     <header class="bg-custom_header">
       <div class="row text-white">
         <div class="col-md-6 col-9 p-3 pl-5">
-          <a class="Main_name" href="#Home"><h3 style="color: white;">Anandhu Mohan</h3></a>
+          <a  href="#Home"><p class="Main_name" style="color: white;">Anandhu Mohan</p></a>
           <p class="main_caption">Do It Yourself</p>
         </div>
         <div class="col-md-6 col-3">
@@ -404,7 +426,7 @@
 
   <section class="bg-custom-light p-5 section_gap" id="Skills">
       <div class="text-center bg-light-blue rounded p-2" style="margin-bottom: 20px;">
-        <h3 class="text-white">Skills & Tools</h3>
+        <p class="text-white headings">Skills & Tools</p>
       </div>
       <div class="text-center" style="margin-top: 20px;margin-bottom: 20px;">
           <h6 style="color:#001F3F;">double click on any skill or tool for more reference</h6>
@@ -464,7 +486,7 @@
 
     <section class="bg-white p-5 section_gap" id="OtherActivities">
         <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-            <h3 class="text-white">Other Activities</h3>
+            <p class="text-white headings">Other Activities</p>
         </div>
         <div class="text-center" style="margin-top: 20px;margin-bottom: 20px;">
           <h6 style="color:#001F3F;">double click on any activity for more reference</h6>
@@ -489,7 +511,7 @@
 
   <section class="bg-custom-light p-5 section_gap" id="Projectlist">
         <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-            <h3 class="text-white">Projects</h3>
+            <p class="text-white headings">Projects</p>
         </div>
         <div class="container">
             <h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
@@ -505,7 +527,7 @@
 
   <section class="bg-white p-5 section_gap" id="Achievementlist">
         <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-            <h3 class="text-white">Achievements</h3>
+            <p class="text-white headings">Achievements</p>
         </div>
         <div class="container">
           <h6 class="text-center" style="color:#008080;">Click on any achievement to redirect to that achievement details</h6>
@@ -525,7 +547,7 @@
 
   <section class="bg-custom-light p-5 section_gap" id="Hobbyproject">
         <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 20px;">
-            <h3 class="text-white">Hobby Projects</h3>
+            <p class="text-white headings">Hobby Projects</p>
         </div>
         <div class="container">
           <h6 class="text-center" style="color:#008080;">Click on any project to redirect to that project details</h6>
@@ -542,7 +564,7 @@
 
   <section class="p-5 bg-wight section_gap" style="align-items:center;" id="Education">
         <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
-              <h3 class="text-center"style="color: white;">Education</h3>
+              <p class="text-center headings"style="color: white;">Education</p>
         </div>
         <div class="container">
           <div class="row">
@@ -581,7 +603,7 @@
   
   <section class="p-5 bg-custom-light section_gap" id="Contact">
     <div class="text-center bg-light-blue rounded p-2"style="margin-bottom: 40px;">
-          <h3 class="text-center"style="color: white;">Contact / Connect</h3>
+          <p class="text-center headings"style="color: white;">Contact / Connect</p>
     </div>
           <div class="container">
               <div class="row">
@@ -620,7 +642,7 @@
 
   <footer class="bg_custom_footer section_gap" style="height: 80px;">
       <div class="container d-flex align-items-center justify-content-center h-100">
-          <h5 class="text-center text-white">Thank you and have a great day</h5>
+          <h6 class="text-center text-white">Thank you and have a great day</h6>
       </div>
   </footer>
   
