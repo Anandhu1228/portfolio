@@ -116,18 +116,18 @@
         </div>
         <div class="row">
         	<div class="col-md-12 img_div mx-auto text-center">
-		    <video style="border-radius: 20px;" class="d-block w-100 custom-video"  controls onclick="toggleFullscreen(this)">
-	            <source src="videos/video1.mp4" type="video/mp4">
+		    <video style="border-radius: 20px;" class="d-block w-100 custom-video lazy-video"  controls onclick="toggleFullscreen(this)">
+	            <source data-src="videos/video1.mp4" type="video/mp4">
 	          </video>
 		</div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image1.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image1.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image2.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image2.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image3.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image3.jpg">
 	      </div>
 	    </div>
 	  </div>
@@ -217,6 +217,43 @@
         }
 
 </script>
+
+<script>
+    // Lazy load images and videos
+    document.addEventListener("DOMContentLoaded", function () {
+        const lazyImages = document.querySelectorAll(".lazy-image");
+        const lazyVideos = document.querySelectorAll(".lazy-video");
+
+        let lazyLoad = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let lazyElement = entry.target;
+                    
+                    // Check if it's an image
+                    if (lazyElement.tagName === "IMG") {
+                        lazyElement.src = lazyElement.getAttribute("data-src");
+                    }
+
+                    // Check if it's a video
+                    if (lazyElement.tagName === "VIDEO") {
+                        const sources = lazyElement.querySelectorAll("source");
+                        sources.forEach(source => {
+                            source.src = source.getAttribute("data-src");
+                        });
+                        lazyElement.load();
+                    }
+                    
+                    observer.unobserve(lazyElement); // Stop observing after loading
+                }
+            });
+        };
+
+        let observer = new IntersectionObserver(lazyLoad);
+
+        lazyImages.forEach(img => observer.observe(img));
+        lazyVideos.forEach(video => observer.observe(video));
+    });
+  </script>
 
 
 	
