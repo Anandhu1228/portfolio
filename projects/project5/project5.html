@@ -141,43 +141,43 @@
 			  </ol>
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image1.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image1.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image2.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image2.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image3.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image3.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image4.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image4.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image5.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image5.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image6.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image6.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image7.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image7.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image9.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image9.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image10.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image10.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image11.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image11.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image12.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image12.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image13.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image13.jpg" alt="Couldn't Load Image">
 			    </div>
 			    <div class="carousel-item">
-			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" src="images/image14.jpg" alt="Couldn't Load Image">
+			      <img class="d-block w-100" style="height: 610px;object-fit: contain;" data-src="images/image14.jpg" alt="Couldn't Load Image">
 			    </div> 
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselProjects" role="button" data-slide="prev">
@@ -271,6 +271,28 @@
       isFullScreen = !isFullScreen;
     }
   });
+
+$(document).ready(function () {
+  // On carousel slide event
+  $('#carouselProjects').on('slid.bs.carousel', function (event) {
+    var currentSlide = $(event.relatedTarget); // Get the newly active slide
+    
+    // Find the image inside the current slide
+    var img = currentSlide.find('img');
+    
+    // If the image has not been loaded yet
+    if (img.attr('src') === undefined || img.attr('src') === '') {
+      // Set the src attribute from data-src
+      img.attr('src', img.data('src'));
+    }
+  });
+
+  // Trigger the first image load on page load
+  var firstImg = $('.carousel-item.active img');
+  if (firstImg.attr('src') === undefined || firstImg.attr('src') === '') {
+    firstImg.attr('src', firstImg.data('src'));
+  }
+});
 </script>
 	
 </body>
