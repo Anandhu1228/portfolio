@@ -370,6 +370,28 @@
       isFullScreen = !isFullScreen;
     }
   });
+
+$(document).ready(function () {
+  // On carousel slide event
+  $('#carouselProjects').on('slid.bs.carousel', function (event) {
+    var currentSlide = $(event.relatedTarget); // Get the newly active slide
+    
+    // Find the image inside the current slide
+    var img = currentSlide.find('img');
+    
+    // If the image has not been loaded yet
+    if (img.attr('src') === undefined || img.attr('src') === '') {
+      // Set the src attribute from data-src
+      img.attr('src', img.data('src'));
+    }
+  });
+
+  // Trigger the first image load on page load
+  var firstImg = $('.carousel-item.active img');
+  if (firstImg.attr('src') === undefined || firstImg.attr('src') === '') {
+    firstImg.attr('src', firstImg.data('src'));
+  }
+});
 </script>
 	
 </body>
