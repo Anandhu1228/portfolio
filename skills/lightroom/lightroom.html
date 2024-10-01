@@ -182,8 +182,32 @@
     }
   });
 </script>
+<script>
+        // IntersectionObserver to lazy-load images and videos
+        document.addEventListener('DOMContentLoaded', function () {
+            const lazyImages = document.querySelectorAll('.lazy-image');
 
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-	
+            const imageObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.getAttribute('data-src');
+                        img.classList.remove('lazy-image');
+                        observer.unobserve(img);
+                    }
+                });
+            }, observerOptions);
+
+            lazyImages.forEach(image => {
+                imageObserver.observe(image);
+            });
+        });
+    </script>
 </body>
 </html>
