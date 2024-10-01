@@ -138,66 +138,66 @@
 					</audio>
 				</div>
         	<div class="col-md-12 img_div mx-auto text-center">
-		    	<video style="border-radius: 20px;" class="d-block w-100 custom-video"  controls onclick="toggleFullscreen(this)">
-	            <source src="videos/video1.mp4" type="video/mp4">
+		    	<video style="border-radius: 20px;" class="d-block w-100 custom-video lazy-video"  controls onclick="toggleFullscreen(this)">
+	            <source data-src="videos/video1.mp4" type="video/mp4">
 	          </video>
 					</div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image1.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image1.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image2.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image2.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image3.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image3.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image4.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image4.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image5.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image5.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image6.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image6.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image7.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image7.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image8.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image8.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image9.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image9.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image10.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image10.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image11.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image11.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image12.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image12.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image13.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image13.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image14.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image14.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image15.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image15.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image16.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image16.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image17.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image17.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image18.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image18.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image19.jpg">
+	        <img class="evid_image img-fluid lazy-image" data-src="images/image19.jpg">
 	      </div>
 	    </div>
 	  </div>
@@ -308,8 +308,50 @@
     }
   });
 </script>
+<script>
+        // IntersectionObserver to lazy-load images and videos
+        document.addEventListener('DOMContentLoaded', function () {
+            const lazyImages = document.querySelectorAll('.lazy-image');
+            const lazyVideos = document.querySelectorAll('.lazy-video');
 
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-	
+            const imageObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.getAttribute('data-src');
+                        img.classList.remove('lazy-image');
+                        observer.unobserve(img);
+                    }
+                });
+            }, observerOptions);
+
+            const videoObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+                        const source = video.querySelector('source');
+                        source.src = source.getAttribute('data-src');
+                        video.load(); // Reload the video to play it
+                        video.classList.remove('lazy-video');
+                        observer.unobserve(video);
+                    }
+                });
+            }, observerOptions);
+
+            lazyImages.forEach(image => {
+                imageObserver.observe(image);
+            });
+
+            lazyVideos.forEach(video => {
+                videoObserver.observe(video);
+            });
+        });
+    </script>
 </body>
 </html>
