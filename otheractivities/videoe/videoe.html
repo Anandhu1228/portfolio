@@ -129,37 +129,37 @@
         </div>
         <div class="row">
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image1.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image1.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image2.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image2.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image3.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image3.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image4.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image4.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image5.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image5.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image6.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image6.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image7.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image7.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image8.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image8.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image9.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image9.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image10.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image10.jpg">
 	      </div>
 	      <div class="col-md-12 img_div mx-auto text-center">
-	        <img class="evid_image img-fluid" src="images/image11.jpg">
+	        <img class="evid_image img-fluid lazy-image" src="images/image11.jpg">
 	      </div>
 	    </div>
 	  </div>
@@ -249,8 +249,32 @@
         }
 
 </script>
+<script>
+        // IntersectionObserver to lazy-load images and videos
+        document.addEventListener('DOMContentLoaded', function () {
+            const lazyImages = document.querySelectorAll('.lazy-image');
 
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-	
+            const imageObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.getAttribute('data-src');
+                        img.classList.remove('lazy-image');
+                        observer.unobserve(img);
+                    }
+                });
+            }, observerOptions);
+
+            lazyImages.forEach(image => {
+                imageObserver.observe(image);
+            });
+        });
+    </script>
 </body>
 </html>
